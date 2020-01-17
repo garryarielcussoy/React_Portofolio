@@ -13,6 +13,7 @@ const inisialization = {
     isLoading: true,
     daftarBuku: [],
     category: 'Umum',
+    activeCategory: '',
     isSearch: false,
     isFilter: false,
     dataDetilPenjual: {
@@ -226,7 +227,7 @@ export const actions = store => (
         await axios
             .post(localHost + 'login', data)
             .then(function(response){
-                store.setState({isLogin: true, tokenLogin: response.data.token})
+                store.setState({isLogin: true, tokenLogin: response.data.token, isLoading: true})
                 alert("Sukses Login!")
             })
             .catch(function(response){
@@ -434,7 +435,7 @@ export const actions = store => (
             .then(function(response){
                 console.warn("CHECK SEARCH QUERY", searchQuery)
                 console.warn("CHECK RESPONSE", response.data)
-                store.setState({daftarBuku: response.data, isLoading: false, isSearch: true, isFilter: true})
+                store.setState({daftarBuku: response.data, isLoading: false, isSearch: true, isFilter: true, activeCategory: state.category})
             })
             .catch(function(response){
                 store.setState({isLoading: false})

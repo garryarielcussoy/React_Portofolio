@@ -75,7 +75,7 @@ class UserBookListPageComponent extends React.Component{
                                 <h4 className='daftar-buku-tersedia'>Hasil Pencarian</h4>
                                 }
                                 { this.props.isFilter === true ?
-                                <h4 className='hasil-filter'>Berdasarkan Kategori : {this.props.category}</h4>:
+                                <h4 className='hasil-filter'>Berdasarkan Kategori : {this.props.activeCategory}</h4>:
                                 <div></div>
                                 }
                                 </div>
@@ -106,4 +106,4 @@ class UserBookListPageComponent extends React.Component{
     }
 }
 
-export default connect("judulBuku, namaUserPenjual, penerbit, pengarang, nomorIsbn, idBuku, category, isLoading, daftarBuku, isSearch, isFilter, dataDetilBuku, dataDetilPenjual, isLogin, tokenLogin, isLoading", actions)(withRouter(UserBookListPageComponent));
+export default connect("judulBuku, namaUserPenjual, penerbit, pengarang, nomorIsbn, idBuku, category, isLoading, daftarBuku, isSearch, isFilter, dataDetilBuku, dataDetilPenjual, isLogin, tokenLogin, isLoading, activeCategory", actions)(withRouter(UserBookListPageComponent));

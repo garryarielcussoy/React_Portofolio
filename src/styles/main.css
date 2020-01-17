@@ -680,6 +680,13 @@
 /* -------------------- HP Screen Size -------------------- */
 @media(max-width:767px){
     /* ----- Home Page ----- */
+    .advertisement-container{
+        margin-top: 200px;
+        border: 1px solid black;
+        padding: 50px;
+        margin-bottom: 150px;
+    }
+    
     .flash{
         font-size: 2em;
         color: blue;
@@ -692,6 +699,10 @@
     }
 
     /* ----- Book List Page ----- */
+    .book-information-container{
+        margin-top: 50px;
+    }
+    
     .search-filter-area{
         margin-top: 130px;
         margin-left: 0px;
@@ -699,6 +710,15 @@
 
     .alamat-container{
         padding: 10px 10px 5px 0px;
+    }
+
+    .tidak-ketemu{
+        margin-top: 20px;
+    }
+
+    .empty-shelf-wrapper img{
+        margin-top: 30px;
+        width: 350px;
     }
 
     /* ----- Cart Page ----- */
