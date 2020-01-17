@@ -1,0 +1,744 @@
+/* -------------------- Not Found -------------------- */
+.not-found-title{
+    font-weight: 700;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    font-size: 2em;
+}
+
+.not-found-content{
+    text-align: center;
+}
+
+.not-found-content img{
+    width: 25%;
+    margin-bottom: 105px;
+}
+
+.loading{
+    margin-top: 200px;
+}
+
+.loading p{
+    font-weight: 700;
+    font-size: 2em;
+}
+
+.loading img{
+    width: 10%;
+}
+
+/* -------------------- Header Section -------------------- */
+.header{
+    text-align: center;
+    background-color: rgba(51, 240, 240, 1);
+    padding: 5px 0px;
+    position: fixed;
+}
+
+.serba-buku-header-logo{
+    width: 130px;
+    height: 60px;
+}
+
+/* -------------------- Navigation Tab -------------------- */
+.navigation-menu{
+    top: 70px;
+    background-color: rgba(51, 240, 240, 1);
+}
+
+.navigation-tabs{
+    text-align: center;
+}
+
+.navigation-tab{
+    font-weight: 800;
+    background-color: rgba(51, 240, 240, 1);
+    border-top: darkblue 3px solid;
+    padding: 10px 15px;
+}
+
+.navigation-tab a{
+    color: black;
+}
+
+.navigation-tab a:hover{
+    color: blue;
+    text-decoration: none;
+}
+
+/* -------------------- Carousel -------------------- */
+.advertisement-container{
+    margin-top: 200px;
+    border: 1px solid black;
+    padding: 50px;
+    margin-bottom: 50px;
+}
+
+.sambutan{
+    font-weight: 600;
+    text-align: center;
+}
+
+.flash{
+    font-size: 5.5em;
+    color: blue;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.W1{
+    animation: w1-pattern linear 5s infinite;
+}
+
+.E2{
+    animation: e2-pattern linear 5s infinite;
+}
+
+.L3{
+    animation: l3-pattern linear 5s infinite;
+}
+
+.C4{
+    animation: c4-pattern linear 5s infinite;
+}
+
+.O5{
+    animation: o5-pattern linear 5s infinite;
+}
+.M6{
+    animation: m6-pattern linear 5s infinite;
+}
+.E7{
+    animation: e7-pattern linear 5s infinite;
+}
+
+@keyframes w1-pattern{
+    0% {opacity: 0;}
+    1% {opacity: 1;}
+    9% {opacity: 1;}
+    10% {opacity: 0;}
+    75% {opacity: 0;}
+    80% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes e2-pattern{
+    0% {opacity: 0;}
+    9% {opacity: 0;}
+    10% {opacity: 1;}
+    19% {opacity: 1;}
+    20% {opacity: 0}
+    75% {opacity: 0;}
+    80% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes l3-pattern{
+    0% {opacity: 0;}
+    19% {opacity: 0;}
+    20% {opacity: 1;}
+    29% {opacity: 1;}
+    30% {opacity: 0}
+    75% {opacity: 0;}
+    80% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes c4-pattern{
+    0% {opacity: 0;}
+    29% {opacity: 0;}
+    30% {opacity: 1;}
+    39% {opacity: 1;}
+    40% {opacity: 0}
+    75% {opacity: 0;}
+    80% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes o5-pattern{
+    0% {opacity: 0;}
+    39% {opacity: 0;}
+    40% {opacity: 1;}
+    49% {opacity: 1;}
+    50% {opacity: 0}
+    75% {opacity: 0;}
+    80% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes m6-pattern{
+    0% {opacity: 0;}
+    49% {opacity: 0;}
+    50% {opacity: 1;}
+    59% {opacity: 1;}
+    60% {opacity: 0}
+    75% {opacity: 0;}
+    80% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes e7-pattern{
+    0% {opacity: 0;}
+    59% {opacity: 0;}
+    60% {opacity: 1;}
+    69% {opacity: 1;}
+    70% {opacity: 0}
+    75% {opacity: 0;}
+    80% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+/* -------------------- Login -------------------- */
+.login-container{
+    margin-top: 150px;
+    margin-bottom: 160px;
+    border-radius: 25px;
+    background-color: rgba(51, 240, 240, 1);
+}
+
+.login-text, .register-text{
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.link-to-register-container{
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+/* -------------------- Register -------------------- */
+.register-container{
+    margin-top: 120px;
+    margin-bottom: 50px;
+    border-radius: 25px;
+    background-color: rgba(51, 240, 240, 1);
+}
+
+/* -------------------- Search and Filter Bar -------------------- */
+.search-filter-area{
+    background-color: rgba(51, 240, 240, 1);
+    margin-top: 117px;
+    margin-left: -15px;
+}
+
+.cari-buku{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: 700;
+}
+
+.search-button{
+    margin-bottom: 15px;
+}
+
+.kategori{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: 700;
+    border-top: 1px solid black;
+}
+
+/* -------------------- Book List Page -------------------- */
+.book-information-container{
+    margin-top: 150px;
+}
+
+.daftar-buku-tersedia, .hasil-filter{
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.each-book-container{
+    border: 1px solid black;
+    padding: 5px;
+    height: 100%;
+}
+
+.each-book-container:hover{
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,1);
+}
+
+.each-book-image-container{
+    margin-bottom: 30px;
+    margin-top: 10px;
+    width: 130px;
+    height: 180px;
+    text-align: center;
+}
+
+.image-container-wrapper{
+    display: block ruby;
+    align-items: center;
+}
+
+.each-book-image-container img{
+    width: 100%;
+}
+
+.wrapper{
+    padding: 5px;
+}
+
+.book-title{
+    text-align: center !important;
+    font-weight: 700;
+    color: black !important;
+}
+
+.book-title:hover{
+    cursor: pointer;
+    text-align: center !important;
+    font-weight: 700;
+    color: black;
+    text-decoration: none !important;
+}
+
+.each-book-container p{
+    font-size: 0.9em;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.tidak-ketemu{
+    font-weight: 700;
+    font-size: 1.6em;
+    text-align: center;
+    margin-top: 170px;
+}
+
+.empty-shelf-wrapper{
+    margin-top: 30px;
+}
+
+/* -------------------- Book Detail Page -------------------- */
+.book-detail-container{
+    padding-top: 150px;
+}
+
+.left-part-container{
+    border: 1px solid black;
+}
+
+.profile-seller-wrapper{
+    padding-top: 10px;
+}
+
+.profile-seller-wrapper img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.username-fullname-hp-wrapper{
+    
+    text-align: left;
+    padding: 10px 5px 5px 5px;
+}
+
+.alamat-container{
+    text-align: left;
+    padding: 5px;
+}
+
+.alamat-container p{
+    padding: 10px 10px 5px 10px;
+}
+
+.book-info-right{
+    border: 1px solid black;
+}
+
+.book-title-right p{
+    font-weight: 700;
+}
+
+.book-information-list{
+    margin-top: 2px;
+}
+
+.book-information-list p{
+    line-height: 0.5;
+    text-align: left;
+}
+
+.deskripsi-container{
+    margin-top: 20px;
+}
+
+.deskripsi-container p{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.foto-buku-wrapper{
+    margin-bottom: 5px;
+}
+
+.foto-buku-wrapper img{
+    width: 100%;
+}
+
+.add-to-cart-container{
+    margin-top: 10px;
+}
+
+.placeholder-start{
+    border: 1px solid gray;
+    padding-top: 15px;
+    padding-bottom: 2px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+}
+
+/* -------------------- Cart -------------------- */
+.cart-container{
+    margin-top: 150px;
+    padding: 10px;
+}
+
+.each-cart-info-container{
+    border: 1px solid gray;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.each-cart-info-container:hover{
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,1);
+    border: 1px solid gray;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.cart-container img{
+    width: 100%;
+}
+
+.each-info-book-cart{
+    text-align: left;
+}
+
+.look-detail-cart{
+    margin-top: 25px;
+    margin-left: 165px;
+}
+
+.order-now-button{
+    margin-top: 20px;    
+}
+
+.empty-cart{
+    padding-top: 150px;
+    margin-bottom: 55px;
+    font-weight: 700;
+}
+
+.empty-cart-logo-wrapper img{
+    width: 100%;
+    margin-bottom: 150px;
+}
+
+/* -------------------- Profile -------------------- */
+/* ----- Profile ----- */
+.profile-biodata-container{
+    padding-top: 150px;
+}
+
+.profile-photo-wrapper{
+    width: 150px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-photo-wrapper img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.username-text{
+    text-align: center;
+}
+
+.profile-text{
+    text-align: left;
+}
+
+.profile-title{
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.logout-button-container{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.toggle-display{
+    font-weight: 700;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+/* ----- Notification ----- */
+.notification-container{
+    margin-top: 20px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.each-notification-list{
+    border: 1px solid black;
+    margin-bottom: 25px;
+    padding: 20px;
+}
+
+.each-notification-list:hover{
+    border: 1px solid black;
+    margin-bottom: 25px;
+    padding: 20px;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,1);
+}
+
+.notification-text{
+    text-align: left;
+}
+
+.transaction-section{
+    border-right: 1px solid black;
+}
+
+.each-detail-container{
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+}
+
+.reject-order-button, .accept-order-button{
+    margin: 20px;
+}
+
+/* ----- Book List ----- */
+.each-book-container-profile{
+    border: 1px solid black;
+    margin-bottom: 25px;
+    padding: 20px;
+}
+
+.each-book-container-profile:hover{
+    border: 1px solid black;
+    margin-bottom: 25px;
+    padding: 20px;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,1);
+}
+
+.each-book-photo-wrapper img{
+    width: 100%;
+}
+
+.book-list-text{
+    text-align: left;
+}
+
+.edit-book-button, .delete-book-button{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.add-book-button-container{
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+/* ----- Shopping History ----- */
+.each-history-container{
+    border: 1px solid black;
+    margin-bottom: 25px;
+    padding: 20px;
+}
+
+.each-history-container:hover{
+    border: 1px solid black;
+    margin-bottom: 25px;
+    padding: 20px;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,1);
+}
+
+.left-part-of-history{
+    border-right: 1px solid black;
+}
+
+.history-list-text{
+    text-align: left;
+}
+
+.each-right-part{
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+.still-empty{
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+/* -------------------- Footer -------------------- */
+.footer{
+    margin-top: 30px;
+    background-color: aqua;
+}
+
+.footer-logo{
+    text-align: center;
+}
+
+.footer-logo-image{
+    width: 130px;
+    height: 60px;
+}
+
+.copyright{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    font-weight: 800;
+}
+
+.about-us-link{
+    padding-top: 20px;
+    padding-bottom: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.about-us-link a{
+    color: black;
+}
+
+.about-us-link a:hover{
+    color: blue;
+    text-decoration: none;
+}
+
+/* -------------------- Admin -------------------- */
+.admin-title{
+    text-align: center;
+    font-weight: 700;
+    padding-top: 150px;
+    margin-bottom: 50px;
+    font-size: 1.2em;
+}
+
+.header-cell{
+    font-weight: 700;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    font-size: 0.8em;
+}
+
+.content-cell{
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    text-align: center;
+    overflow: auto;
+    font-size: 0.8em;
+}
+
+.delete-user-button{
+    margin-top: 15px;
+}
+
+.inner-cell{
+    border-bottom: 1px solid black;
+    font-size: 0.8em;
+}
+
+.right-most-cell{
+    border-right: 1px solid black;
+}
+
+/* -------------------- About -------------------- */
+.about-us-title{
+    padding-top: 100px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+.about-us-content{
+    border: 1px solid black;
+    padding: 20px;
+    text-align: justify;
+    margin-bottom: 275px;
+}
+
+/* -------------------- HP Screen Size -------------------- */
+@media(max-width:767px){
+    /* ----- Home Page ----- */
+    .flash{
+        font-size: 2em;
+        color: blue;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .W1, .E2, .L3, .C4, .O5, .M6, .E7{
+        animation: none;
+    }
+
+    /* ----- Book List Page ----- */
+    .search-filter-area{
+        margin-top: 130px;
+        margin-left: 0px;
+    }
+
+    .alamat-container{
+        padding: 10px 10px 5px 0px;
+    }
+
+    /* ----- Cart Page ----- */
+    .look-detail-cart{
+        margin-left: 0px;
+    }
+
+    /* ----- Profile ----- */
+    .profile-photo-wrapper{
+        text-align: left;
+    }
+
+    .username-text{
+        text-align: left;
+    }
+
+    /* ----- Notification ----- */
+    .transaction-section{
+        border-bottom: 1px solid black;
+        border-right: none;
+    }
+    
+    .each-detail-container{
+        border-bottom: 1px solid black;
+        margin-bottom: 15px;
+        padding-top: 15px;
+    }
+    
+    .reject-order-button, .accept-order-button{
+        margin: 20px;
+    }
+
+    /* ----- History ----- */
+    .left-part-of-history{
+        border-bottom: 1px solid black;
+        border-right: none;
+    }
+    
+    .each-right-part{
+        border-bottom: 1px solid black;
+        padding: 10px;
+    }
+}
