@@ -91,7 +91,7 @@
     animation: w1-pattern linear 5s infinite;
 }
 
-.E2{
+.e2{
     animation: e2-pattern linear 5s infinite;
 }
 
@@ -109,7 +109,7 @@
 .M6{
     animation: m6-pattern linear 5s infinite;
 }
-.E7{
+.e7{
     animation: e7-pattern linear 5s infinite;
 }
 
@@ -694,7 +694,7 @@
         margin-right: 0px;
     }
 
-    .W1, .E2, .L3, .C4, .O5, .M6, .E7{
+    .W1, .e2, .L3, .C4, .O5, .M6, .e7{
         animation: none;
     }
 
