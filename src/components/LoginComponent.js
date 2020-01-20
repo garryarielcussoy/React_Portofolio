@@ -15,7 +15,6 @@ class LoginComponent extends React.Component{
     
     toHandleLogin = async () => {
         await this.props.handleLogin()
-        console.warn("CHECK PROPS AFTER LOGIN", this.props.usernameLogin, this.props.passwordLogin, this.props.isLogin, this.props.tokenLogin)
         if (this.props.usernameLogin === 'ADMIN' & this.props.isLogin === true){
             this.toAdmin()
         }

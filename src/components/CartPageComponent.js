@@ -23,7 +23,6 @@ class CartPageComponent extends React.Component{
     }
     
     render(){
-        console.warn("CHECK CART LIST", this.props.cartList)
         const cartList = this.props.cartList
         if (cartList.length !== 0){
             return (

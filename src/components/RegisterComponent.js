@@ -10,7 +10,6 @@ import { actions, store } from "../store/store";
 class RegisterComponent extends React.Component{
     toHandleRegister = async () => {
         await this.props.handleRegister()
-        await console.warn("CHECK ISVALID", this.props.isValid)
         if (this.props.isValid === true){
             this.props.history.push('/login')   
         }

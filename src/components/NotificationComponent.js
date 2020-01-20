@@ -41,7 +41,13 @@ class NotificationComponent extends React.Component{
                                 <div className='row'>
                                     <div className='col-md-1 col-sm-12'></div>
                                     <div className='col-md-10 col-sm-10'>
-                                        <h5 className='profile-title'>PESANAN MASUK</h5>
+                                    <h5 className='profile-title'>
+                                        {this.props.notificationList !== 0 ?
+                                        <span className='notification-circle'>OI</span> :
+                                        <span></span>
+                                        }
+                                        PESANAN MASUK
+                                    </h5>
                                         {this.props.showNotifications === true ?
                                         <div className='container-fluid'>
                                             <div className='row'>

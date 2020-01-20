@@ -11,7 +11,6 @@ const localHost = 'http://0.0.0.0:4000/';
 
 class BookDetailComponent extends React.Component{
     render(){
-        console.warn("CHECK PROPS IN BOOK DETAIL COMPONENT", this.props)
         return (
             <React.Fragment>
                 <div className='container-fluid book-detail-container'>

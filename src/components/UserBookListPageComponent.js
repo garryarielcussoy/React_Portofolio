@@ -26,17 +26,14 @@ class UserBookListPageComponent extends React.Component{
 
     componentDidMount = () => {
         const self = this;
-        console.warn("CHECK TOKEN", this.props.tokenLogin)
         store.setState({isLoading: true})
         axios
             .get(localHost + "users/buku", {headers: {"Authorization" : "Bearer " + this.props.tokenLogin} })
             .then(function(response){
-                console.warn("CHECK RESPONSE", response.data)
                 store.setState({daftarBuku: response.data, isLoading: false})
             })
             .catch(function(response){
                 store.setState({isLoading: false})
-                console.warn('TES ERROR DID MOUNT USER')
             })
     }
     

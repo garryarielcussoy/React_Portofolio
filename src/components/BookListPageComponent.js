@@ -27,16 +27,13 @@ class BookListPageComponent extends React.Component{
 
     componentDidMount = () => {
         const self = this;
-        console.warn("TES DID MOUNT", this.props)
         axios
             .get(localHost + "public/buku")
             .then(function(response){
-                console.warn("CHECK RESPONSE", response.data)
                 store.setState({daftarBuku: response.data, isLoading: false})
             })
             .catch(function(response){
                 store.setState({isLoading: false})
-                console.warn('TES ERROR')
             })
     }
     
