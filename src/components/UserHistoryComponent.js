@@ -7,7 +7,7 @@ import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
-const localHost = 'http://0.0.0.0:4000/';
+const localHost = this.props.localHost;
 
 class UserHistoryComponent extends React.Component{
     toggleDisplay = async () => {
@@ -83,4 +83,4 @@ class UserHistoryComponent extends React.Component{
     }
 }
 
-export default connect("judulBuku, namaUserPenjual, penerbit, pengarang, nomorIsbn, idBuku, category, isLoading, daftarBuku, isSearch, isFilter, dataDetilBuku, dataDetilPenjual, historyList, showHistory", actions)(withRouter(UserHistoryComponent));
+export default connect("judulBuku, namaUserPenjual, penerbit, pengarang, nomorIsbn, idBuku, category, isLoading, daftarBuku, isSearch, isFilter, dataDetilBuku, dataDetilPenjual, historyList, showHistory, localHost", actions)(withRouter(UserHistoryComponent));

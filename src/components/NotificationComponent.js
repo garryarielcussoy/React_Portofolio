@@ -7,7 +7,7 @@ import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
-const localHost = 'http://0.0.0.0:4000/';
+const localHost = this.props.localHost;
 
 class NotificationComponent extends React.Component{
     rejectOrder = async (notificationId) => {
@@ -42,8 +42,8 @@ class NotificationComponent extends React.Component{
                                     <div className='col-md-1 col-sm-12'></div>
                                     <div className='col-md-10 col-sm-10'>
                                     <h5 className='profile-title'>
-                                        {this.props.notificationList !== 0 ?
-                                        <span className='notification-circle'>OI</span> :
+                                        {notificationList.length !== 0 ?
+                                        <span className='notification-circle'>oi</span> :
                                         <span></span>
                                         }
                                         PESANAN MASUK
@@ -105,4 +105,4 @@ class NotificationComponent extends React.Component{
     }
 }
 
-export default connect("notificationList ,judulBuku, namaUserPenjual, penerbit, pengarang, nomorIsbn, idBuku, category, isLoading, daftarBuku, isSearch, isFilter, dataDetilBuku, dataDetilPenjual, showNotifications", actions)(withRouter(NotificationComponent));
+export default connect("notificationList ,judulBuku, namaUserPenjual, penerbit, pengarang, nomorIsbn, idBuku, category, isLoading, daftarBuku, isSearch, isFilter, dataDetilBuku, dataDetilPenjual, showNotifications, localHost", actions)(withRouter(NotificationComponent));

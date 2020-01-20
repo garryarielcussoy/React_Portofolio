@@ -7,7 +7,7 @@ import { withRouter, Link } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
-const localHost = 'http://0.0.0.0:4000/'
+const localHost = this.props.localHost;
 
 class SearchAndFilter extends React.Component{
     render(){
@@ -58,4 +58,4 @@ class SearchAndFilter extends React.Component{
     }
 }
 
-export default connect("judulBuku, namaUserPenjual, penerbit, pengarang, nomorIsbn, idBuku, category, isLoading, daftarBuku", actions)(withRouter(SearchAndFilter));
+export default connect("judulBuku, namaUserPenjual, penerbit, pengarang, nomorIsbn, idBuku, category, isLoading, daftarBuku, localHost", actions)(withRouter(SearchAndFilter));

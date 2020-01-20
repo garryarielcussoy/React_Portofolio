@@ -7,7 +7,7 @@ import { withRouter, Link } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
-const localHost = 'http://0.0.0.0:4000/';
+const localHost = this.props.localHost;
 
 class UserBookListComponent extends React.Component{
     editBook = async (bookId) => {
@@ -95,4 +95,4 @@ class UserBookListComponent extends React.Component{
     }
 }
 
-export default connect("showBookList, bookList, judulBuku, namaUserPenjual, penerbit, pengarang, nomorIsbn, idBuku, category, isLoading, daftarBuku, isSearch, isFilter, dataDetilBuku, dataDetilPenjual", actions)(withRouter(UserBookListComponent));
+export default connect("showBookList, bookList, judulBuku, namaUserPenjual, penerbit, pengarang, nomorIsbn, idBuku, category, isLoading, daftarBuku, isSearch, isFilter, dataDetilBuku, dataDetilPenjual, localHost", actions)(withRouter(UserBookListComponent));

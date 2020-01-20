@@ -11,7 +11,7 @@ import emptyShelf from "../img/emptyShelf.png"
 import loadingGif from "../img/loading.gif"
 import serbaBukuLogo from "../img/SerbaBuku.png"
 
-const localHost = 'http://0.0.0.0:4000/';
+const localHost = this.props.localHost;
 
 class BookListPageComponent extends React.Component{
     toBookDetail = async (bookId) => {
@@ -103,4 +103,4 @@ class BookListPageComponent extends React.Component{
     }
 }
 
-export default connect("activeCategory, judulBuku, namaUserPenjual, penerbit, pengarang, nomorIsbn, idBuku, category, isLoading, daftarBuku, isSearch, isFilter, dataDetilBuku, dataDetilPenjual, isLogin, isLoading", actions)(withRouter(BookListPageComponent));
+export default connect("activeCategory, judulBuku, namaUserPenjual, penerbit, pengarang, nomorIsbn, idBuku, category, isLoading, daftarBuku, isSearch, isFilter, dataDetilBuku, dataDetilPenjual, isLogin, isLoading, localHost", actions)(withRouter(BookListPageComponent));

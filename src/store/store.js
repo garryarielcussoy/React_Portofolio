@@ -92,10 +92,11 @@ const inisialization = {
     adminUserList: [],
     adminTransaksiList: [],
     successAddBook: true,
-    successEditBook: true
+    successEditBook: true,
+    localHost = 'http://0.0.0.0:5000/'
 }
 
-const localHost = 'http://0.0.0.0:4000/';
+const localHost = inisialization.localHost
 
 export const store = createStore(inisialization)
 

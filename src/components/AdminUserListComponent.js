@@ -7,7 +7,7 @@ import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
-const localHost = 'http://0.0.0.0:4000/';
+const localHost = this.props.localHost;
 
 class AdminUserListComponent extends React.Component{
     deleteUser = async (userId) => {
@@ -61,4 +61,4 @@ class AdminUserListComponent extends React.Component{
     }
 }
 
-export default connect("judulBuku, adminUserList, namaUserPenjual, penerbit, pengarang, nomorIsbn, idBuku, category, isLoading, daftarBuku, isSearch, isFilter, dataDetilBuku, dataDetilPenjual, adminUserList", actions)(withRouter(AdminUserListComponent));
+export default connect("localHost, judulBuku, adminUserList, namaUserPenjual, penerbit, pengarang, nomorIsbn, idBuku, category, isLoading, daftarBuku, isSearch, isFilter, dataDetilBuku, dataDetilPenjual, adminUserList", actions)(withRouter(AdminUserListComponent));

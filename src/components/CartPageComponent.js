@@ -9,7 +9,7 @@ import { actions, store } from "../store/store";
 
 import emptyCartLogo from '../img/emptyCart.png'
 
-const localHost = 'http://0.0.0.0:4000/';
+const localHost = this.props.localHost;
 
 class CartPageComponent extends React.Component{
     toBookDetail = (bookId) => {
@@ -105,4 +105,4 @@ class CartPageComponent extends React.Component{
         
 }
 
-export default connect("judulBuku, namaUserPenjual, penerbit, pengarang, nomorIsbn, idBuku, category, isLoading, daftarBuku, isSearch, isFilter, dataDetilBuku, dataDetilPenjual, isLogin, cartList, totalHarga, jumlahPembelian, usernamePenjualCart, alamatCart, nomorHpCart", actions)(withRouter(CartPageComponent));
+export default connect("localHost, judulBuku, namaUserPenjual, penerbit, pengarang, nomorIsbn, idBuku, category, isLoading, daftarBuku, isSearch, isFilter, dataDetilBuku, dataDetilPenjual, isLogin, cartList, totalHarga, jumlahPembelian, usernamePenjualCart, alamatCart, nomorHpCart", actions)(withRouter(CartPageComponent));
