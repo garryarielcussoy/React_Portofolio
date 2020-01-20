@@ -96,6 +96,7 @@ const inisialization = {
     localHost = 'http://0.0.0.0:5000/'
 }
 
+// const localHost = '13.229.61.125:5000/'
 const localHost = inisialization.localHost
 
 export const store = createStore(inisialization)
