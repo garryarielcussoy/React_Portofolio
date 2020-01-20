@@ -7,8 +7,6 @@ import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
-const localHost = this.props.localHost;
-
 class UserHistoryComponent extends React.Component{
     toggleDisplay = async () => {
         if (this.props.showHistory === false){

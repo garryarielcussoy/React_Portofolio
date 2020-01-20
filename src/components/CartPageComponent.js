@@ -9,8 +9,6 @@ import { actions, store } from "../store/store";
 
 import emptyCartLogo from '../img/emptyCart.png'
 
-const localHost = this.props.localHost;
-
 class CartPageComponent extends React.Component{
     toBookDetail = (bookId) => {
         this.props.clickBookDetailUser(bookId)

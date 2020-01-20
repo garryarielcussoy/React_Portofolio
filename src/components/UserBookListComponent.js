@@ -7,8 +7,6 @@ import { withRouter, Link } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
-const localHost = this.props.localHost;
-
 class UserBookListComponent extends React.Component{
     editBook = async (bookId) => {
         await this.props.prepareEditBook(bookId)

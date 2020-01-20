@@ -93,7 +93,7 @@ const inisialization = {
     adminTransaksiList: [],
     successAddBook: true,
     successEditBook: true,
-    localHost = '13.229.61.125:5000/'
+    localHost: '13.229.61.125:5000/'
 }
 
 // const localHost = '13.229.61.125:5000/'

@@ -11,8 +11,6 @@ import emptyShelf from "../img/emptyShelf.png"
 import loadingGif from "../img/loading.gif"
 import serbaBukuLogo from "../img/SerbaBuku.png"
 
-const localHost = this.props.localHost;
-
 class BookListPageComponent extends React.Component{
     toBookDetail = async (bookId) => {
         if(this.props.isLogin === false){
@@ -27,6 +25,8 @@ class BookListPageComponent extends React.Component{
 
     componentDidMount = () => {
         const self = this;
+        const localHost = this.props.localHost;
+
         axios
             .get(localHost + "public/buku")
             .then(function(response){

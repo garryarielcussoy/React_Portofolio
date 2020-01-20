@@ -10,8 +10,6 @@ import { actions, store } from "../store/store";
 import emptyShelf from "../img/emptyShelf.png"
 import loadingGif from "../img/loading.gif"
 
-const localHost = this.props.localHost;
-
 class UserBookListPageComponent extends React.Component{
     toBookDetail = async (bookId) => {
         if(this.props.isLogin === false){
@@ -26,6 +24,8 @@ class UserBookListPageComponent extends React.Component{
 
     componentDidMount = () => {
         const self = this;
+        const localHost = this.props.localHost;
+        
         store.setState({isLoading: true})
         axios
             .get(localHost + "users/buku", {headers: {"Authorization" : "Bearer " + this.props.tokenLogin} })
