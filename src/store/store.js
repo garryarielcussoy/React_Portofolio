@@ -93,10 +93,11 @@ const inisialization = {
     adminTransaksiList: [],
     successAddBook: true,
     successEditBook: true,
-    localHost: '13.229.61.125:5000/'
+    localHost: 'https://serbabuku.club/'
 }
 
-// const localHost = '13.229.61.125:5000/'
+// consy localHost = 'http://serbabuku.club/'
+// const localHost = 'http://13.229.61.125:5000/'
 // const localHost = 'http://0.0.0.0:5000/'
 const localHost = inisialization.localHost
 
@@ -105,7 +106,6 @@ export const store = createStore(inisialization)
 export const actions = store => (
 {
     handleChange: (state, event) => {
-        console.warn(event.target.value)
         store.setState({[event.target.name]: event.target.value})
     },
 
