@@ -12,6 +12,8 @@ const Carousel = () => {
             <div className='row'>
                 <div className='col-md-2 col-sm-1'></div>
                 <div className='col-md-8 col-sm-10 advertisement-container'>
+                    
+                    {/* ----- Welcome Keyframes ----- */}
                     <span className='W1 flash'>W</span>
                     <span className='eTwo flash'>E</span>
                     <span className='L3 flash'>L</span>
@@ -19,6 +21,7 @@ const Carousel = () => {
                     <span className='O5 flash'>O</span>
                     <span className='M6 flash'>M</span>
                     <span className='eSeven flash'>E</span>
+                    
                     <p className='sambutan'>Selamat datang di SerbaBuku, surganya pecinta buku. Di sini, kamu bisa
                     mencari buku-buku yang sesuai seleramu, ataupun berbagi buku favoritmu kepada
                     orang lain.

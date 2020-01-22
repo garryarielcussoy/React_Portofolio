@@ -2,22 +2,24 @@ import React from 'react'
 import '../styles/bootstrap.min.css'
 import '../styles/main.css'
 
-import axios from 'axios'
 import { withRouter, Link } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
 class UserBookListComponent extends React.Component{
+    // Redirect to form for editting book
     editBook = async (bookId) => {
         await this.props.prepareEditBook(bookId)
         this.props.history.push("/users/profile/edit-buku")
     }
 
+    // Handling delete book
     deleteBook = async (bookId) => {
         await this.props.deleteBook(bookId)
         this.props.showProfile()
     }
 
+    // Show or hide books list
     toggleDisplay = async () => {
         if (this.props.showBookList === false){
             await store.setState({showBookList: true})
@@ -28,7 +30,9 @@ class UserBookListComponent extends React.Component{
     }
     
     render(){
+        // Get all his/her books list
         const bookList = this.props.bookList
+
         return (
             <React.Fragment>
                 <div className='container-fluid'>
@@ -93,4 +97,4 @@ class UserBookListComponent extends React.Component{
     }
 }
 
-export default connect("showBookList, bookList, judulBuku, namaUserPenjual, penerbit, pengarang, nomorIsbn, idBuku, category, isLoading, daftarBuku, isSearch, isFilter, dataDetilBuku, dataDetilPenjual, localHost", actions)(withRouter(UserBookListComponent));
+export default connect("showBookList, bookList", actions)(withRouter(UserBookListComponent));

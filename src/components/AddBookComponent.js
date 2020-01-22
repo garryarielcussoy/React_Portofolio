@@ -2,14 +2,16 @@ import React from 'react'
 import '../styles/bootstrap.min.css'
 import '../styles/main.css'
 
-import axios from 'axios'
-import { withRouter, Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
 class AddBookComponent extends React.Component{    
+    // Handling function for adding a new book
     addBook = async () => {
         await this.props.addBook()
+
+        // If the proccess going well, redirect to profile page, otherwise stay in the page
         if (this.props.successAddBook === true){
             this.props.history.push('/users/profile')
             this.props.showProfile()

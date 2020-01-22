@@ -1,14 +1,13 @@
 import React from 'react';
 import '../styles/bootstrap.min.css'
 import '../styles/main.css'
-import serbaBukuLogo from '../img/SerbaBuku.png'
 
-import axios from 'axios'
 import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
 class AddToCart extends React.Component{
+    // Handling function when user add a book to cart
     handleAddToCart = () => {
         this.props.addToCart()
         this.props.history.push('/users/buku')

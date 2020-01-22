@@ -1,3 +1,13 @@
+/* -------------------- Global -------------------- */
+.unstyled-col{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.unstyled-col-center{
+    text-align: center;
+}
+
 /* -------------------- Not Found -------------------- */
 .not-found-title{
     font-weight: 700;
@@ -253,7 +263,20 @@
 .each-book-container{
     border: 1px solid black;
     padding: 5px;
+    padding-bottom: 15px;
     height: 100%;
+}
+
+.each-book-tag-left{
+    text-align: left;
+}
+
+.each-book-tag-center{
+    text-align: center;
+}
+
+.each-book-tag-right{
+    text-align: left;
 }
 
 .each-book-container:hover{
@@ -321,6 +344,10 @@
     border: 1px solid black;
 }
 
+.tag-container{
+    margin-top: 5px;
+}
+
 .profile-seller-wrapper{
     padding-top: 10px;
 }
@@ -372,11 +399,15 @@
 }
 
 .foto-buku-wrapper{
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .foto-buku-wrapper img{
     width: 100%;
+}
+
+.detail-tag-container{
+    margin-bottom: 10px;
 }
 
 .add-to-cart-container{

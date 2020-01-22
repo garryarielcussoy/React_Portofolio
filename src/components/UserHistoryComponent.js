@@ -2,12 +2,12 @@ import React from 'react'
 import '../styles/bootstrap.min.css'
 import '../styles/main.css'
 
-import axios from 'axios'
 import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
 class UserHistoryComponent extends React.Component{
+    // Show or hide shopping history
     toggleDisplay = async () => {
         if (this.props.showHistory === false){
             await store.setState({showHistory: true})
@@ -18,7 +18,9 @@ class UserHistoryComponent extends React.Component{
     }
     
     render(){
+        // Get all his/her shopping history list
         const historyList = this.props.historyList
+        
         return (
             <React.Fragment>
                 <div className='container-fluid'>
@@ -81,4 +83,4 @@ class UserHistoryComponent extends React.Component{
     }
 }
 
-export default connect("judulBuku, namaUserPenjual, penerbit, pengarang, nomorIsbn, idBuku, category, isLoading, daftarBuku, isSearch, isFilter, dataDetilBuku, dataDetilPenjual, historyList, showHistory, localHost", actions)(withRouter(UserHistoryComponent));
+export default connect("historyList, showHistory", actions)(withRouter(UserHistoryComponent));

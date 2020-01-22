@@ -3,7 +3,7 @@ import '../styles/bootstrap.min.css'
 import '../styles/main.css'
 
 import axios from 'axios'
-import { withRouter, Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
@@ -11,11 +11,14 @@ import emptyShelf from "../img/emptyShelf.png"
 import loadingGif from "../img/loading.gif"
 
 class UserBookListPageComponent extends React.Component{
+    // Handling the case when user click on a book (redirect user to the detail of the clicked book)
     toBookDetail = async (bookId) => {
+        // For public
         if(this.props.isLogin === false){
             await this.props.clickBookDetail(bookId)
             await this.props.history.push('/public/buku/' + bookId)
         }
+        // For signed in users
         else{
             await this.props.clickBookDetailUser(bookId)
             await this.props.history.push('/users/buku/' + bookId)
@@ -23,22 +26,29 @@ class UserBookListPageComponent extends React.Component{
     }
 
     componentDidMount = () => {
-        const self = this;
         const localHost = this.props.localHost;
         
         store.setState({isLoading: true})
         axios
             .get(localHost + "users/buku", {headers: {"Authorization" : "Bearer " + this.props.tokenLogin} })
-            .then(function(response){
+            .then(response => {
                 store.setState({daftarBuku: response.data, isLoading: false})
             })
-            .catch(function(response){
+            .catch(response => {
                 store.setState({isLoading: false})
             })
     }
     
     render(){
+        // Redirect to login page if the user has not signed in yet
+        if (this.props.isLogin === false){
+            this.props.history.push('/login')
+        }
+
+        // Get the list of all books that have at least one book
         const daftarBuku = this.props.daftarBuku
+
+        // Loading session
         if (this.props.isLoading === true){
             return (
                 <div className="loading">
@@ -47,6 +57,8 @@ class UserBookListPageComponent extends React.Component{
                 </div>
             )
         }
+
+        // What to be shown when the book(s) user looking for is not found
         else if(daftarBuku.length === 0){
             return (
                 <div className='container-fluid'>
@@ -61,23 +73,29 @@ class UserBookListPageComponent extends React.Component{
                 </div>
             )
         }
+
+        // Show all books (can be filtered)
         else {
             return (
                 <React.Fragment>
                     <div className='container-fluid book-information-container'>
                         <div className='row'>
                             <div className='col-12'>
+                                {/* ----- Search ----- */}
                                 { this.props.isSearch === false ? 
                                 <h4 className='daftar-buku-tersedia'>Daftar Buku Tersedia</h4> :
                                 <h4 className='daftar-buku-tersedia'>Hasil Pencarian</h4>
                                 }
+                                {/* ----- Filter ----- */}
                                 { this.props.isFilter === true ?
                                 <h4 className='hasil-filter'>Berdasarkan Kategori : {this.props.activeCategory}</h4>:
                                 <div></div>
                                 }
                                 </div>
+
+                            {/* ----- Looping to shows all books in list ----- */}    
                             {daftarBuku.map((buku, index) => 
-                                <div className='wrapper col-md-3 col-sm-6'>    
+                                <div className='wrapper col-md-4 col-sm-6'>    
                                     <div className='each-book-container'>
                                         <a onClick={() => this.toBookDetail(buku.id_buku)} className='book-title'>{buku.judul_buku}</a>
                                         <div className='image-container-wrapper text-center'>    
@@ -85,13 +103,55 @@ class UserBookListPageComponent extends React.Component{
                                                 <img src={buku.foto_buku} />
                                             </div>
                                         </div>
-                                        <p><b>Penjual</b> : {buku.username_penjual}</p>
-                                        <p><b>Penerbit</b> : {buku.penerbit}</p>
-                                        <p><b>Pengarang</b> : {buku.pengarang}</p>
-                                        <p><b>ID Buku</b> : {buku.id_buku}</p>
-                                        <p><b>ISBN</b> : {buku.nomor_isbn}</p>
-                                        <p><b>Harga</b> : Rp {buku.harga_satuan}</p>
-                                        <p><b>Stok</b> : {buku.stok}</p>
+                                        <div className='container-fluid'>
+                                            <div className='row'>
+                                                <div className='unstyled-col col-3'><p className='each-book-tag-left'><b>ID</b></p></div>
+                                                <div className='unstyled-col-center col-1'><p className='each-book-tag'><b>:</b></p></div>
+                                                <div className='unstyled-col col-7'><p className='each-book-tag-right'>{buku.id_buku}</p></div>
+                                            </div>
+                                        </div>
+                                        <div className='container-fluid'>
+                                            <div className='row'>
+                                                <div className='unstyled-col col-3'><p className='each-book-tag-left'><b>Penjual</b></p></div>
+                                                <div className='unstyled-col-center col-1'><p className='each-book-tag'><b>:</b></p></div>
+                                                <div className='unstyled-col col-7'><p className='each-book-tag-right'>{buku.username_penjual}</p></div>
+                                            </div>
+                                        </div>
+                                        <div className='container-fluid'>
+                                            <div className='row'>
+                                                <div className='unstyled-col col-3'><p className='each-book-tag-left'><b>Penerbit</b></p></div>
+                                                <div className='unstyled-col-center col-1'><p className='each-book-tag'><b>:</b></p></div>
+                                                <div className='unstyled-col col-7'><p className='each-book-tag-right'>{buku.penerbit}</p></div>
+                                            </div>
+                                        </div>
+                                        <div className='container-fluid'>
+                                            <div className='row'>
+                                                <div className='unstyled-col col-3'><p className='each-book-tag-left'><b>Pengarang</b></p></div>
+                                                <div className='unstyled-col-center col-1'><p className='each-book-tag'><b>:</b></p></div>
+                                                <div className='unstyled-col col-7'><p className='each-book-tag-right'>{buku.pengarang}</p></div>
+                                            </div>
+                                        </div>
+                                        <div className='container-fluid'>
+                                            <div className='row'>
+                                                <div className='unstyled-col col-3'><p className='each-book-tag-left'><b>ISBN</b></p></div>
+                                                <div className='unstyled-col-center col-1'><p className='each-book-tag'><b>:</b></p></div>
+                                                <div className='unstyled-col col-7'><p className='each-book-tag-right'>{buku.nomor_isbn}</p></div>
+                                            </div>
+                                        </div>
+                                        <div className='container-fluid'>
+                                            <div className='row'>
+                                                <div className='unstyled-col col-3'><p className='each-book-tag-left'><b>Harga</b></p></div>
+                                                <div className='unstyled-col-center col-1'><p className='each-book-tag'><b>:</b></p></div>
+                                                <div className='unstyled-col col-7'><p className='each-book-tag-right'>{buku.harga_satuan}</p></div>
+                                            </div>
+                                        </div>
+                                        <div className='container-fluid'>
+                                            <div className='row'>
+                                                <div className='unstyled-col col-3'><p className='each-book-tag-left'><b>Stok</b></p></div>
+                                                <div className='unstyled-col-center col-1'><p className='each-book-tag'><b>:</b></p></div>
+                                                <div className='unstyled-col col-7'><p className='each-book-tag-right'>{buku.stok}</p></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             )}
@@ -103,4 +163,4 @@ class UserBookListPageComponent extends React.Component{
     }
 }
 
-export default connect("judulBuku, namaUserPenjual, penerbit, pengarang, nomorIsbn, idBuku, category, isLoading, daftarBuku, isSearch, isFilter, dataDetilBuku, dataDetilPenjual, isLogin, tokenLogin, isLoading, activeCategory, localHost", actions)(withRouter(UserBookListPageComponent));
+export default connect("activeCategory, daftarBuku, isSearch, isFilter, isLogin, isLoading, localHost, tokenLogin", actions)(withRouter(UserBookListPageComponent));

@@ -2,22 +2,24 @@ import React from 'react'
 import '../styles/bootstrap.min.css'
 import '../styles/main.css'
 
-import axios from 'axios'
 import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
 class NotificationComponent extends React.Component{
+    // Handling reject order case
     rejectOrder = async (notificationId) => {
         await this.props.rejectOrder(notificationId)
         this.props.showProfile()
     }
 
+    // Handling accept order case
     acceptOrder = async (notificationId) => {
         await this.props.acceptOrder(notificationId)
         this.props.showProfile()
     }
 
+    // Show or hide notifications list
     toggleDisplay = async () => {
         if (this.props.showNotifications === false){
             await store.setState({showNotifications: true})
@@ -40,12 +42,17 @@ class NotificationComponent extends React.Component{
                                     <div className='col-md-1 col-sm-12'></div>
                                     <div className='col-md-10 col-sm-10'>
                                     <h5 className='profile-title'>
+
+                                        {/* ----- Notification Icon ----- */}
                                         {notificationList.length !== 0 ?
                                         <span className='notification-circle'>oi</span> :
                                         <span></span>
                                         }
                                         PESANAN MASUK
+
                                     </h5>
+                                        
+                                        {/* ----- Show Notifications ----- */}
                                         {this.props.showNotifications === true ?
                                         <div className='container-fluid'>
                                             <div className='row'>
@@ -103,4 +110,4 @@ class NotificationComponent extends React.Component{
     }
 }
 
-export default connect("notificationList ,judulBuku, namaUserPenjual, penerbit, pengarang, nomorIsbn, idBuku, category, isLoading, daftarBuku, isSearch, isFilter, dataDetilBuku, dataDetilPenjual, showNotifications, localHost", actions)(withRouter(NotificationComponent));
+export default connect("notificationList, showNotifications", actions)(withRouter(NotificationComponent));

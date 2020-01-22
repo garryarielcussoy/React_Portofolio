@@ -2,26 +2,30 @@ import React from 'react'
 import '../styles/bootstrap.min.css'
 import '../styles/main.css'
 
-import axios from 'axios'
-import { withRouter, Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
 import emptyCartLogo from '../img/emptyCart.png'
 
 class CartPageComponent extends React.Component{
+    // Handling case when user click on the "Lihat Detail"
     toBookDetail = (bookId) => {
         this.props.clickBookDetailUser(bookId)
         this.props.history.push("/users/buku/" + bookId)
     }
 
+    // Handling case when user click the sent order button
     sentOrder = () => {
         this.props.sentCart()
         this.props.history.push("/users")
     }
     
     render(){
+        // Get the only one active cart list
         const cartList = this.props.cartList
+        
+        // Show the cart content
         if (cartList.length !== 0){
             return (
                 <React.Fragment>
@@ -83,6 +87,7 @@ class CartPageComponent extends React.Component{
             )
         }
 
+        // What to be shown when the cart is empty
         else if(cartList.length === 0 | cartList === undefined){
             return (
                 <React.Fragment>
@@ -103,4 +108,4 @@ class CartPageComponent extends React.Component{
         
 }
 
-export default connect("localHost, judulBuku, namaUserPenjual, penerbit, pengarang, nomorIsbn, idBuku, category, isLoading, daftarBuku, isSearch, isFilter, dataDetilBuku, dataDetilPenjual, isLogin, cartList, totalHarga, jumlahPembelian, usernamePenjualCart, alamatCart, nomorHpCart", actions)(withRouter(CartPageComponent));
+export default connect("isLogin, cartList, totalHarga, jumlahPembelian, usernamePenjualCart, alamatCart, nomorHpCart", actions)(withRouter(CartPageComponent));

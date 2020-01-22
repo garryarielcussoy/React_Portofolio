@@ -8,12 +8,14 @@ import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
 class AdminUserListComponent extends React.Component{
+    // Handling the case when admin press delete button to delete user
     deleteUser = async (userId) => {
         await this.props.deleteUser(userId)
         this.props.handleAdmin()
     }
     
     render(){
+        // Get all users list
         const userList = this.props.adminUserList
         
         return (
@@ -21,6 +23,8 @@ class AdminUserListComponent extends React.Component{
                 <h4 className='admin-title'>USER LIST</h4>
                 <div className='container-fluid'>
                     <div className='row'>
+                        
+                        {/* ----- Table Header ----- */}
                         <div className='col-1'></div>
                         <div className='col-1 header-cell'>ID</div>
                         <div className='col-1 header-cell'>Username</div>
@@ -32,6 +36,8 @@ class AdminUserListComponent extends React.Component{
                         <div className='col-1 header-cell'>Status</div>
                         <div className='col-1 right-most-cell header-cell'>Hapus</div>
                         <div className='col-1'></div>
+
+                        {/* ----- Table Content ------ */}
                         {userList.map(user => 
                             <React.Fragment>
                                 <div className='col-1'></div>
@@ -59,4 +65,4 @@ class AdminUserListComponent extends React.Component{
     }
 }
 
-export default connect("localHost, judulBuku, adminUserList, namaUserPenjual, penerbit, pengarang, nomorIsbn, idBuku, category, isLoading, daftarBuku, isSearch, isFilter, dataDetilBuku, dataDetilPenjual, adminUserList", actions)(withRouter(AdminUserListComponent));
+export default connect("adminUserList", actions)(withRouter(AdminUserListComponent));

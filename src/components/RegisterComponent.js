@@ -2,17 +2,21 @@ import React from 'react'
 import '../styles/bootstrap.min.css'
 import '../styles/main.css'
 
-import axios from 'axios'
-import { withRouter, Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
 class RegisterComponent extends React.Component{
+    // Handling register session
     toHandleRegister = async () => {
         await this.props.handleRegister()
+
+        // When success, redirect to login page
         if (this.props.isValid === true){
             this.props.history.push('/login')   
         }
+
+        // When fail, stay in the page
         else if (this.props.isValid === false){
             this.props.history.push('/daftar')   
         }

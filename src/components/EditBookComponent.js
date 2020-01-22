@@ -2,14 +2,15 @@ import React from 'react'
 import '../styles/bootstrap.min.css'
 import '../styles/main.css'
 
-import axios from 'axios'
-import { withRouter, Link } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
 class EditBookComponent extends React.Component{    
+    // Handling case when user click edit book
     editBook = async () => {
         await this.props.editBook(this.props.bookIdEdit)
+        // Case when user succesfully edit book (without missing requirement fields)
         if(this.props.successEditBook === true){
             this.props.history.push('/users/profile')
             this.props.showProfile()
@@ -72,4 +73,4 @@ class EditBookComponent extends React.Component{
     }
 }
 
-export default connect("bookIdEdit, isValid, judulBukuEdit, pengarangEdit, penerbitEdit, nomorIsbnEdit, categoryEdit, fotoBukuEdit, hargaSatuanEdit, stokEdit, deskripsiBukuEdit, successEditBook", actions)(withRouter(EditBookComponent));
+export default connect("bookIdEdit, judulBukuEdit, pengarangEdit, penerbitEdit, nomorIsbnEdit, categoryEdit, fotoBukuEdit, hargaSatuanEdit, stokEdit, deskripsiBukuEdit, successEditBook", actions)(withRouter(EditBookComponent));

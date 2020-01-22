@@ -2,65 +2,116 @@ import React from 'react'
 import '../styles/bootstrap.min.css'
 import '../styles/main.css'
 
-import axios from 'axios'
 import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
-class BookDetailComponent extends React.Component{
-    render(){
-        return (
-            <React.Fragment>
-                <div className='container-fluid book-detail-container'>
-                    <div className='row'>
-                        <div className='col-md-6 col-sm-12'>
-                            <div className='container-fluid'>
-                                <div className='row left-part-container'>
-                                    <div className='col-md-3 col-sm-12 profile-seller-container'>
-                                        <div className='profile-seller-wrapper'>
-                                            <img src={this.props.dataDetilPenjual.fotoProfil} />
+const BookDetailComponent = (props) => {
+    return (
+        <React.Fragment>
+            <div className='container-fluid book-detail-container'>
+                <div className='row'>
+                    
+                    {/* ----- Showing seller information ----- */}
+                    <div className='col-md-6 col-sm-12'>
+                        <div className='container-fluid'>
+                            <div className='row left-part-container'>
+                                <div className='col-md-3 col-sm-12 profile-seller-container'>
+                                    <div className='profile-seller-wrapper'>
+                                        <img src={props.dataDetilPenjual.fotoProfil} />
+                                    </div>
+                                </div>
+                                <div className='col-md-7 col-sm-12 username-fullname-hp-wrapper'>
+                                    <div className='container-fluid'>
+                                        <div className='row tag-container'>
+                                            <div className='col-5 unstyled-col'><p className='each-book-tag'><b>Username</b></p></div>
+                                            <div className='col-1 unstyled-col'><p className='each-book-tag'><b>:</b></p></div>
+                                            <div className='col-4 unstyled-col'><p className='each-book-tag'>{props.dataDetilPenjual.username}</p></div>
                                         </div>
                                     </div>
-                                    <div className='col-md-7 col-sm-12 username-fullname-hp-wrapper'>
-                                        <p><b>Username Penjual</b>: {this.props.dataDetilPenjual.username}</p>
-                                        <p><b>Nama Lengkap Penjual</b>: {this.props.dataDetilPenjual.namaLengkap}</p>
-                                        <p><b>Nomor HP Penjual</b>: {this.props.dataDetilPenjual.nomorHp}</p>
+                                    <div className='container-fluid'>
+                                        <div className='row tag-container'>
+                                            <div className='col-5 unstyled-col'><p className='each-book-tag'><b>Nama Lengkap</b></p></div>
+                                            <div className='col-1 unstyled-col'><p className='each-book-tag'><b>:</b></p></div>
+                                            <div className='col-4 unstyled-col'><p className='each-book-tag'>{props.dataDetilPenjual.namaLengkap}</p></div>
+                                        </div>
                                     </div>
-                                    <div className='col-12 alamat-container'>
-                                        <p><b>Alamat Penjual</b>:<br />{this.props.dataDetilPenjual.alamat}</p>
+                                    <div className='container-fluid'>
+                                        <div className='row tag-container'>
+                                            <div className='col-5 unstyled-col'><p className='each-book-tag'><b>Nomor HP</b></p></div>
+                                            <div className='col-1 unstyled-col'><p className='each-book-tag'><b>:</b></p></div>
+                                            <div className='col-4 unstyled-col'><p className='each-book-tag'>{props.dataDetilPenjual.nomorHp}</p></div>
+                                        </div>
                                     </div>
+                                </div>
+                                <div className='col-12 alamat-container'>
+                                    <p><b>Alamat Penjual</b><br />{props.dataDetilPenjual.alamat}</p>
                                 </div>
                             </div>
                         </div>
-                        <div className='col-md-6 col-sm-12'>
-                            <div className='container-fluid'>
-                                <div className='row book-info-right'>
-                                    <div className='col-12 book-title-right'>
-                                    <p>{this.props.dataDetilBuku.judulBuku}</p>
-                                    </div>
-                                    <div className='col-md-4 col-sm-12 foto-buku-wrapper'>
-                                        <img src={this.props.dataDetilBuku.fotoBuku} />
-                                    </div>
-                                    <div className='col-md-8 col-sm-12 book-information-list'>
-                                        <p><b>Kategori</b>: {this.props.dataDetilBuku.kategori}</p>
-                                        <p><b>ID Buku</b>: {this.props.dataDetilBuku.idBuku}</p>
-                                        <p><b>Penerbit</b>: {this.props.dataDetilBuku.penerbit}</p>
-                                        <p><b>Pengarang</b>: {this.props.dataDetilBuku.pengarang}</p>
-                                        <p><b>ISBN</b>: {this.props.dataDetilBuku.nomorIsbn}</p>
-                                        <p><b>Harga Satuan</b>: Rp {this.props.dataDetilBuku.hargaSatuan}</p>
-                                        <p><b>Stok</b>: {this.props.dataDetilBuku.stok}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='col-12 deskripsi-container'>
-                            <p><b>Deskripsi Buku</b>:<br />{this.props.dataDetilBuku.deskripsiBuku}</p>
-                        </div>    
                     </div>
-                </div>                
-            </React.Fragment>
-        )
-    }
+
+                    {/* ----- Showing book informations ----- */}
+                    <div className='col-md-6 col-sm-12'>
+                        <div className='container-fluid'>
+                            <div className='row book-info-right'>
+                                <div className='col-12 book-title-right'>
+                                <p>{props.dataDetilBuku.judulBuku}</p>
+                                </div>
+                                <div className='col-md-4 col-sm-12 foto-buku-wrapper'>
+                                    <img src={props.dataDetilBuku.fotoBuku} />
+                                </div>
+                                <div className='col-md-8 col-sm-12 book-information-list'>
+                                    <div className='container-fluid'>
+                                        <div className='row detail-tag-container'>
+                                            <div className='col-3 unstyled-col'><p className='each-tag-book-left'><b>Kategori</b></p></div>
+                                            <div className='col-1 unstyled-col-center'><p><b>:</b></p></div>
+                                            <div className='col-7 unstyled-col'><p>{props.dataDetilBuku.kategori}</p></div>
+                                        </div>
+                                        <div className='row detail-tag-container'>
+                                            <div className='col-3 unstyled-col'><p className='each-tag-book-left'><b>ID Buku</b></p></div>
+                                            <div className='col-1 unstyled-col-center'><p><b>:</b></p></div>
+                                            <div className='col-7 unstyled-col'><p>{props.dataDetilBuku.idBuku}</p></div>
+                                        </div>
+                                        <div className='row detail-tag-container'>
+                                            <div className='col-3 unstyled-col'><p className='each-tag-book-left'><b>Penerbit</b></p></div>
+                                            <div className='col-1 unstyled-col-center'><p><b>:</b></p></div>
+                                            <div className='col-7 unstyled-col'><p>{props.dataDetilBuku.penerbit}</p></div>
+                                        </div>
+                                        <div className='row detail-tag-container'>
+                                            <div className='col-3 unstyled-col'><p className='each-tag-book-left'><b>Pengarang</b></p></div>
+                                            <div className='col-1 unstyled-col-center'><p><b>:</b></p></div>
+                                            <div className='col-7 unstyled-col'><p>{props.dataDetilBuku.pengarang}</p></div>
+                                        </div>
+                                        <div className='row detail-tag-container'>
+                                            <div className='col-3 unstyled-col'><p className='each-tag-book-left'><b>ISBN</b></p></div>
+                                            <div className='col-1 unstyled-col-center'><p><b>:</b></p></div>
+                                            <div className='col-7 unstyled-col'><p>{props.dataDetilBuku.nomorIsbn}</p></div>
+                                        </div>
+                                        <div className='row detail-tag-container'>
+                                            <div className='col-3 unstyled-col'><p className='each-tag-book-left'><b>Harga</b></p></div>
+                                            <div className='col-1 unstyled-col-center'><p><b>:</b></p></div>
+                                            <div className='col-7 unstyled-col'><p>Rp {props.dataDetilBuku.hargaSatuan}</p></div>
+                                        </div>
+                                        <div className='row detail-tag-container'>
+                                            <div className='col-3 unstyled-col'><p className='each-tag-book-left'><b>Stok</b></p></div>
+                                            <div className='col-1 unstyled-col-center'><p><b>:</b></p></div>
+                                            <div className='col-7 unstyled-col'><p>{props.dataDetilBuku.stok}</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* ----- Shwoing book description ----- */}
+                    <div className='col-12 deskripsi-container'>
+                        <p><b>Deskripsi Buku</b><br />{props.dataDetilBuku.deskripsiBuku}</p>
+                    </div>    
+                </div>
+            </div>                
+        </React.Fragment>
+    )
 }
 
-export default connect("judulBuku, namaUserPenjual, penerbit, pengarang, nomorIsbn, idBuku, category, isLoading, daftarBuku, isSearch, isFilter, dataDetilBuku, dataDetilPenjual, localHost", actions)(withRouter(BookDetailComponent));
+export default connect("dataDetilBuku, dataDetilPenjual", actions)(withRouter(BookDetailComponent));
