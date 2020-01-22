@@ -2,7 +2,6 @@ import React from 'react'
 import '../styles/bootstrap.min.css'
 import '../styles/main.css'
 
-import axios from 'axios'
 import { withRouter, Link } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
@@ -33,4 +32,4 @@ class NotPageFound extends React.Component{
     }
 }
 
-export default connect("judulBuku, namaUserPenjual, penerbit, pengarang, nomorIsbn, idBuku, category, isLoading, daftarBuku, isSearch, isFilter, dataDetilBuku, dataDetilPenjual, isLogin", actions)(withRouter(NotPageFound));
+export default connect("", actions)(withRouter(NotPageFound));
