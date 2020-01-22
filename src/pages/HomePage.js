@@ -11,17 +11,15 @@ import Carousel from '../components/Carousel'
 import Footer from '../components/FooterComponent'
 import NavigationTab from '../components/NavigationTab'
 
-class HomePage extends React.Component{
-    render(){
-        return (
-            <React.Fragment>
-                <Header />
-                <NavigationTab />
-                <Carousel />
-                <Footer />
-            </React.Fragment>
-        )
-    }
+const HomePage = () => {
+    return (
+        <React.Fragment>
+            <Header />
+            <NavigationTab />
+            <Carousel />
+            <Footer />
+        </React.Fragment>
+    )
 }
 
 export default connect("", actions)(withRouter(HomePage));

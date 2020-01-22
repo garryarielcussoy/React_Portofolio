@@ -11,17 +11,15 @@ import Footer from '../components/FooterComponent'
 import NavigationTab from '../components/NavigationTab'
 import CartPageComponent from '../components/CartPageComponent';
 
-class CartPage extends React.Component{
-    render(){
-        return (
-            <React.Fragment>
-                <Header />
-                <NavigationTab />
-                <CartPageComponent />
-                <Footer />
-            </React.Fragment>
-        )
-    }
+const CartPage = () => {
+    return (
+        <React.Fragment>
+            <Header />
+            <NavigationTab />
+            <CartPageComponent />
+            <Footer />
+        </React.Fragment>
+    )
 }
 
 export default connect("", actions)(withRouter(CartPage));

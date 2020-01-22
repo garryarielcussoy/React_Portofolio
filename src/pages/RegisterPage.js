@@ -9,15 +9,13 @@ import { actions, store } from "../store/store";
 import Header from '../components/Header'
 import RegisterComponent from '../components/RegisterComponent';
 
-class RegisterPage extends React.Component{
-    render(){
-        return (
-            <React.Fragment>
-                <Header />
-                <RegisterComponent />
-            </React.Fragment>
-        )
-    }
+const RegisterPage = () => {
+    return (
+        <React.Fragment>
+            <Header />
+            <RegisterComponent />
+        </React.Fragment>
+    )
 }
 
 export default connect("", actions)(withRouter(RegisterPage));

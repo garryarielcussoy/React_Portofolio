@@ -11,17 +11,15 @@ import Footer from '../components/FooterComponent'
 import NavigationTabAdmin from '../components/NavigationTabAdmin'
 import AdminUserListComponent from '../components/AdminUserListComponent';
 
-class AdminListUserPage extends React.Component{
-    render(){
-        return (
-            <React.Fragment>
-                <Header />
-                <NavigationTabAdmin />
-                <AdminUserListComponent />
-                <Footer />
-            </React.Fragment>
-        )
-    }
+const AdminListUserPage = () => {
+    return (
+        <React.Fragment>
+            <Header />
+            <NavigationTabAdmin />
+            <AdminUserListComponent />
+            <Footer />
+        </React.Fragment>
+    )
 }
 
 export default connect("", actions)(withRouter(AdminListUserPage));

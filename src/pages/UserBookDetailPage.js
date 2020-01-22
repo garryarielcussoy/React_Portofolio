@@ -12,21 +12,19 @@ import NavigationTab from '../components/NavigationTab'
 import BookDetailComponent from '../components/BookDetailComponent'
 import AddToCart from '../components/AddToCart'
 
-class UserBookDetailPage extends React.Component{
-    render(){
-        return (
-            <React.Fragment>
-                <Header />
-                <NavigationTab />
-                <BookDetailComponent />
-                {this.props.canAdd === true ?
-                <AddToCart />:
-                <div></div>
-                }
-                <FooterComponent />
-            </React.Fragment>
-        )
-    }
+const UserBookDetailPage = (props) => {
+    return (
+        <React.Fragment>
+            <Header />
+            <NavigationTab />
+            <BookDetailComponent />
+            {this.props.canAdd === true ?
+            <AddToCart />:
+            <div></div>
+            }
+            <FooterComponent />
+        </React.Fragment>
+    )
 }
 
 export default connect("canAdd", actions)(withRouter(UserBookDetailPage));

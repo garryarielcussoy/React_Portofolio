@@ -11,17 +11,15 @@ import FooterComponent from '../components/FooterComponent'
 import NavigationTab from '../components/NavigationTab'
 import BookDetailComponent from '../components/BookDetailComponent'
 
-class BookDetailPage extends React.Component{
-    render(){
-        return (
-            <React.Fragment>
-                <Header />
-                <NavigationTab />
-                <BookDetailComponent />
-                <FooterComponent />
-            </React.Fragment>
-        )
-    }
+const BookDetailPage = () => {
+    return (
+        <React.Fragment>
+            <Header />
+            <NavigationTab />
+            <BookDetailComponent />
+            <FooterComponent />
+        </React.Fragment>
+    )
 }
 
 export default connect("", actions)(withRouter(BookDetailPage));

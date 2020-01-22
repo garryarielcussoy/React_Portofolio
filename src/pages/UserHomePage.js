@@ -11,23 +11,23 @@ import Carousel from '../components/Carousel'
 import Footer from '../components/FooterComponent'
 import NavigationTab from '../components/NavigationTab'
 
-class UserHomePage extends React.Component{
-    render(){
-        if (this.props.isLogin === true){
-            return (
-                <React.Fragment>
-                    <Header />
-                    <NavigationTab />
-                    <Carousel />
-                    <Footer />
-                </React.Fragment>
-            )
-        }
-        
-        else {
-            this.props.history.push('/login')
-            return <div></div>
-        }
+const UserHomePage = (props) => {
+    // For user
+    if (this.props.isLogin === true){
+        return (
+            <React.Fragment>
+                <Header />
+                <NavigationTab />
+                <Carousel />
+                <Footer />
+            </React.Fragment>
+        )
+    }
+    
+    // For someone who has not logged in
+    else {
+        this.props.history.push('/login')
+        return <div></div>
     }
 }
 

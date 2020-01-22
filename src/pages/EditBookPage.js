@@ -9,15 +9,13 @@ import { actions, store } from "../store/store";
 import Header from '../components/Header'
 import EditBookComponent from '../components/EditBookComponent'
 
-class EditBookPage extends React.Component{
-    render(){
-        return (
-            <React.Fragment>
-                <Header />
-                <EditBookComponent />
-            </React.Fragment>
-        )
-    }
+const EditBookPage = () => {
+    return (
+        <React.Fragment>
+            <Header />
+            <EditBookComponent />
+        </React.Fragment>
+    )
 }
 
 export default connect("", actions)(withRouter(EditBookPage));

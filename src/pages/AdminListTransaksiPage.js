@@ -11,17 +11,15 @@ import Footer from '../components/FooterComponent'
 import NavigationTabAdmin from '../components/NavigationTabAdmin'
 import AdminTransaksiListComponent from '../components/AdminTransaksiListComponent';
 
-class AdminListTransaksiPage extends React.Component{
-    render(){
-        return (
-            <React.Fragment>
-                <Header />
-                <NavigationTabAdmin />
-                <AdminTransaksiListComponent />
-                <Footer />
-            </React.Fragment>
-        )
-    }
+const AdminListTransaksiPage = () => {
+    return (
+        <React.Fragment>
+            <Header />
+            <NavigationTabAdmin />
+            <AdminTransaksiListComponent />
+            <Footer />
+        </React.Fragment>
+    )
 }
 
 export default connect("", actions)(withRouter(AdminListTransaksiPage));

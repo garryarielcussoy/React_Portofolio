@@ -9,15 +9,13 @@ import { actions, store } from "../store/store";
 import Header from '../components/Header'
 import LoginComponent from '../components/LoginComponent'
 
-class LoginPage extends React.Component{
-    render(){
-        return (
-            <React.Fragment>
-                <Header />
-                <LoginComponent />
-            </React.Fragment>
-        )
-    }
+const LoginPage = () => {
+    return (
+        <React.Fragment>
+            <Header />
+            <LoginComponent />
+        </React.Fragment>
+    )
 }
 
 export default connect("", actions)(withRouter(LoginPage));

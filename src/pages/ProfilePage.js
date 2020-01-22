@@ -14,20 +14,18 @@ import UserBookListComponent from '../components/UserBookListComponent'
 import UserHistoryComponent from '../components/UserHistoryComponent'
 import FooterComponent from '../components/FooterComponent';
 
-class ProfilePage extends React.Component{
-    render(){
-        return (
-            <React.Fragment>
-                <Header />
-                <NavigationTab />
-                <ProfileComponent />
-                <NotificationComponent />
-                <UserBookListComponent />
-                <UserHistoryComponent />
-                <FooterComponent />
-            </React.Fragment>
-        )
-    }
+const ProfilePage = () => {
+    return (
+        <React.Fragment>
+            <Header />
+            <NavigationTab />
+            <ProfileComponent />
+            <NotificationComponent />
+            <UserBookListComponent />
+            <UserHistoryComponent />
+            <FooterComponent />
+        </React.Fragment>
+    )
 }
 
 export default connect("", actions)(withRouter(ProfilePage));

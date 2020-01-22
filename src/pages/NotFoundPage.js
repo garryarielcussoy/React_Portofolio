@@ -11,25 +11,23 @@ import FooterComponent from '../components/FooterComponent'
 
 import sadFace from '../img/sadFace.png'
 
-class NotPageFound extends React.Component{
-    render(){
-        return (
-            <React.Fragment>
-                <Header />
-                <div className='container-fluid'>
-                    <div className='row'>
-                        <div className='col-md-2 col-sm-12'></div>
-                        <div className='col-md-8 col-sm-12 not-found-content'>
-                            <h4 className='not-found-title'>Maaf, halaman yang kamu cari tidak ditemukan</h4>
-                            <img src={sadFace}/>
-                        </div>
-                        <div className='col-md-2 col-sm-12'></div>
+const NotPageFound = () => {
+    return (
+        <React.Fragment>
+            <Header />
+            <div className='container-fluid'>
+                <div className='row'>
+                    <div className='col-md-2 col-sm-12'></div>
+                    <div className='col-md-8 col-sm-12 not-found-content'>
+                        <h4 className='not-found-title'>Maaf, halaman yang kamu cari tidak ditemukan</h4>
+                        <img src={sadFace}/>
                     </div>
+                    <div className='col-md-2 col-sm-12'></div>
                 </div>
-                <FooterComponent />
-            </React.Fragment>
-        )
-    }
+            </div>
+            <FooterComponent />
+        </React.Fragment>
+    )
 }
 
 export default connect("", actions)(withRouter(NotPageFound));
