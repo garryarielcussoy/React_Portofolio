@@ -374,10 +374,9 @@ export const actions = store => (
     deleteBook: async (state, bookId) => {
         await axios({method: 'delete', url: localHost + "users/profile/edit-buku/" + bookId, headers: {"Authorization" : "Bearer " + state.tokenLogin}})
             .then(response => {
-                alert("Kamu sukses menghapus buku")
+                Swal.fire("Kamu sukses menghapus buku", "", "success")
             })
             .catch(response => {
-                alert(response.message)
             })
     },
 
@@ -418,11 +417,11 @@ export const actions = store => (
         await axios({method: 'put', url: localHost + "users/profile/edit-buku/" + bookId, headers: {"Authorization" : "Bearer " + state.tokenLogin}, data: data})        
         .then(response => {
             store.setState({successEditBook: true})
-            alert("Kamu sukses mengedit buku")
+            Swal.fire("Kamu sukses mengedit buku", "", "success")
         })
         .catch(response => {
             store.setState({successEditBook: false})
-            alert("Tidak boleh ada field yang dikosongkan (kecuali foto buku)")
+            Swal.fire("Tidak boleh ada field yang dikosongkan (kecuali foto buku)", "", "warning")
         })
     },
 
