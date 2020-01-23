@@ -18,7 +18,7 @@ const UserBookListPage = () => {
             <div className='container-fluid'>
                 <div class='row'>
                     <div className='col-1'></div>
-                    <div className='col-md-4 col-sm-10 search-filter-container'>
+                    <div className='col-md-3 col-sm-10 search-filter-container'>
                         <SearchAndFilter />
                     </div>
                     <div className='col-md-7 col-sm-12 book-list-container'>
