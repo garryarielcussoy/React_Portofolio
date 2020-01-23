@@ -1,5 +1,6 @@
 import createStore from 'unistore'
 import axios from 'axios'
+import Swal from 'sweetalert2'
 import { stat } from 'fs';
 import { func } from 'prop-types';
 
@@ -159,10 +160,10 @@ export const actions = store => (
         await axios({method: 'patch', url: localHost + "users/buku/" + state.dataDetilBuku.idBuku, headers: {"Authorization" : "Bearer " + state.tokenLogin}, data: {jumlah_pembelian: state.placeholderStart} })
             .then(response => {
                 store.setState({placeholderStart: 0})
-                alert(response.data.message)
+                Swal.fire(response.data.message, '', 'info')
             })
             .catch(response => {
-                alert(response.message)
+                Swal.fire(response.message, '', 'warning')
             })
     },
 
@@ -231,8 +232,8 @@ export const actions = store => (
         await axios
             .post(localHost + 'register', data)
             .then(response => {
-                alert(response.data.message)
                 if (response.data.message === 'Selamat! Akunmu sudah terdaftar sekarang'){
+                    Swal.fire(response.data.message, '', 'success')
                     store.setState({
                         isValid: true, 
                         emailRegister: '', 
@@ -246,11 +247,12 @@ export const actions = store => (
                 }
                 else {
                     store.setState({isValid: false})
+                    Swal.fire(response.data.message, '', 'warning')
                 }
             })
             .catch(response => {
                 store.setState({isValid: false})
-                alert(response.data.message)
+                Swal.fire(response.data.message, '', 'warning')
             })
     },
 
@@ -265,11 +267,11 @@ export const actions = store => (
             .post(localHost + 'login', data)
             .then(response => {
                 store.setState({isLogin: true, tokenLogin: response.data.token, isLoading: true})
-                alert("Sukses Login!")
+                Swal.fire('Login berhasil!', 'Selamat datang ' + data.username, 'success')
             })
             .catch(response => {
                 store.setState({tokenLogin: '', isLogin: false})
-                alert("Username atau password yang kamu masukkan salah")
+                Swal.fire('Username atau password yang kamu masukkan salah', '', 'warning')
             })
     },
 
