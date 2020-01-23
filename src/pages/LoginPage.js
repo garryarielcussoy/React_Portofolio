@@ -6,13 +6,13 @@ import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
-import Header from '../components/Header'
+import SimpleHeader from '../components/SimpleHeader'
 import LoginComponent from '../components/LoginComponent'
 
 const LoginPage = () => {
     return (
         <React.Fragment>
-            <Header />
+            <SimpleHeader />
             <LoginComponent />
         </React.Fragment>
     )

@@ -10,12 +10,12 @@ import Header from '../components/Header'
 import Carousel from '../components/Carousel'
 import Footer from '../components/FooterComponent'
 import NavigationTab from '../components/NavigationTab'
+import HeaderAndNavigation from '../components/HeaderAndNavigation'
 
 const HomePage = () => {
     return (
         <React.Fragment>
-            <Header />
-            <NavigationTab />
+            <HeaderAndNavigation />
             <Carousel />
             <Footer />
         </React.Fragment>

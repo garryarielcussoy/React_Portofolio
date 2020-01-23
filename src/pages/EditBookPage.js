@@ -6,13 +6,13 @@ import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
-import Header from '../components/Header'
+import SimpleHeader from '../components/SimpleHeader'
 import EditBookComponent from '../components/EditBookComponent'
 
 const EditBookPage = () => {
     return (
         <React.Fragment>
-            <Header />
+            <SimpleHeader />
             <EditBookComponent />
         </React.Fragment>
     )

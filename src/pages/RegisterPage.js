@@ -6,13 +6,13 @@ import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
-import Header from '../components/Header'
+import SimpleHeader from '../components/SimpleHeader'
 import RegisterComponent from '../components/RegisterComponent';
 
 const RegisterPage = () => {
     return (
         <React.Fragment>
-            <Header />
+            <SimpleHeader />
             <RegisterComponent />
         </React.Fragment>
     )

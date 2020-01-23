@@ -55,7 +55,7 @@ class RegisterComponent extends React.Component{
                             <div className="form-group">
                                 <input onChange={e => this.props.handleChange(e)} type="text" class="form-control" name="fotoProfilRegister" id="fotoProfilRegister" aria-describedby="fotoProfilRegister" placeholder="Foto Profil" />
                             </div>
-                            <button type="submit" class="btn btn-primary search-button" onClick={() => this.toHandleRegister()}>Daftar</button>
+                            <button type="submit" style={{width: "200px"}} class="btn btn-primary search-button" onClick={() => this.toHandleRegister()}>Daftar</button>
                         </form>
                         </div>
                         <div className='col-md-4 col-sm-12'></div>

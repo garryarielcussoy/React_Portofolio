@@ -50,7 +50,7 @@ class LoginComponent extends React.Component{
                             <div className="form-group">
                                 <input onChange={e => this.props.handleChange(e)} type="password" class="form-control" name="passwordLogin" id="passwordLogin" aria-describedby="passwordLogin" placeholder="Password" />
                             </div>
-                            <button type="submit" class="btn btn-primary search-button" onClick={() => this.toHandleLogin()}>Login</button>
+                            <button type="submit" style={{width: "200px"}} class="btn btn-primary search-button" onClick={() => this.toHandleLogin()}>Login</button>
                         </form>
 
                         {/* ----- Redirect to Register Page ----- */}

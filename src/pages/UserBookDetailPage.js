@@ -6,19 +6,17 @@ import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
-import Header from '../components/Header'
+import HeaderAndNavigation from '../components/HeaderAndNavigation'
 import FooterComponent from '../components/FooterComponent'
-import NavigationTab from '../components/NavigationTab'
 import BookDetailComponent from '../components/BookDetailComponent'
 import AddToCart from '../components/AddToCart'
 
 const UserBookDetailPage = (props) => {
     return (
         <React.Fragment>
-            <Header />
-            <NavigationTab />
+            <HeaderAndNavigation />
             <BookDetailComponent />
-            {this.props.canAdd === true ?
+            {props.canAdd === true ?
             <AddToCart />:
             <div></div>
             }

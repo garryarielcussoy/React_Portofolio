@@ -95,7 +95,7 @@ class UserBookListPageComponent extends React.Component{
 
                             {/* ----- Looping to shows all books in list ----- */}    
                             {daftarBuku.map((buku, index) => 
-                                <div className='wrapper col-md-4 col-sm-6'>    
+                                <div className='wrapper col-6'>    
                                     <div className='each-book-container'>
                                         <a onClick={() => this.toBookDetail(buku.id_buku)} className='book-title'>{buku.judul_buku}</a>
                                         <div className='image-container-wrapper text-center'>    

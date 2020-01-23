@@ -22,18 +22,16 @@ class AdminUserListComponent extends React.Component{
             <React.Fragment>
                 <h4 className='admin-title'>USER LIST</h4>
                 <div className='container-fluid'>
-                    <div className='row'>
+                    <div className='row admin-user-container'>
                         
                         {/* ----- Table Header ----- */}
                         <div className='col-1'></div>
                         <div className='col-1 header-cell'>ID</div>
                         <div className='col-1 header-cell'>Username</div>
-                        <div className='col-1 header-cell'>Nama Lengkap</div>
-                        <div className='col-1 header-cell'>Email</div>
+                        <div className='col-2 header-cell'>Nama Lengkap</div>
+                        <div className='col-2 header-cell'>Email</div>
                         <div className='col-2 header-cell'>Alamat</div>
                         <div className='col-1 header-cell'>Nomor HP</div>
-                        <div className='col-1 header-cell'>Tanggal Bergabung</div>
-                        <div className='col-1 header-cell'>Status</div>
                         <div className='col-1 right-most-cell header-cell'>Hapus</div>
                         <div className='col-1'></div>
 
@@ -41,18 +39,16 @@ class AdminUserListComponent extends React.Component{
                         {userList.map(user => 
                             <React.Fragment>
                                 <div className='col-1'></div>
-                                <div className='col-1 content-cell'>{user.user_id}</div>
+                                <div className='col-1 content-cell'><div>{user.user_id}</div></div>
                                 <div className='col-1 content-cell'>{user.username}</div>
-                                <div className='col-1 content-cell'>{user.nama_lengkap}</div>
-                                <div className='col-1 content-cell'>{user.email}</div>
+                                <div className='col-2 content-cell'>{user.nama_lengkap}</div>
+                                <div className='col-2 content-cell'>{user.email}</div>
                                 <div className='col-2 content-cell'>{user.alamat}</div>
                                 <div className='col-1 content-cell'>{user.nomor_hp}</div>
-                                <div className='col-1 content-cell'>{user.tanggal_bergabung}</div>
-                                <div className='col-1 content-cell'>{user.status === null ? <span>None</span> : <span>{user.status}</span>}</div>
                                 <div className='col-1 right-most-cell content-cell'>
                                     { user.status === "terhapus" ?
                                     <span>Terhapus</span>:
-                                    <button type='button' onClick={() => this.deleteUser(user.user_id)} className='delete-user-button btn btn-danger'>Hapus</button>
+                                    <button type='button' onClick={() => this.deleteUser(user.user_id)} className='delete-user-button btn-sm btn-primary'>Hapus</button>
                                     }
                                 </div>
                                 <div className='col-1'></div>

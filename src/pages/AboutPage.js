@@ -6,14 +6,14 @@ import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
-import Header from '../components/Header'
+import SimpleHeader from '../components/SimpleHeader'
 import FooterComponent from '../components/FooterComponent';
 
 const AboutPage = (props) => {
     return (
         <React.Fragment>
             <div className='peak'>
-            <Header />
+            <SimpleHeader />
             <h4 className='about-us-title'>ABOUT US</h4>
             <div className='container-fluid'>
                 <div className='row'>

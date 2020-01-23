@@ -12,9 +12,9 @@ const AdminTransaksiListComponent = () => {
 
     return (
         <React.Fragment>
-            <h4 className='admin-title'>TRANSAKSI LIST</h4>
+            <h4 className='admin-title'>TRANSACTIONS LIST</h4>
             <div className='container-fluid'>
-                <div className='row'>
+                <div className='row admin-transaction-container'>
 
                     {/* ----- Table Header ----- */}
                     <div className='col-1'></div>
@@ -24,9 +24,7 @@ const AdminTransaksiListComponent = () => {
                     <div className='col-1 header-cell'>Waktu Beli</div>
                     <div className='col-1 header-cell'>Konfirmasi</div>
                     <div className='col-1 header-cell'>Status</div>
-                    <div className='col-2 header-cell'>Judul Buku</div>
-                    <div className='col-1 header-cell'>Total Beli</div>
-                    <div className='col-1 right-most-cell header-cell'>Total Harga</div>
+                    <div className='col-4 header-cell right-most-cell'>Detail Pembelian</div>
                     <div className='col-1'></div>
 
                     {/* ----- Table Content ----- */}
@@ -36,41 +34,15 @@ const AdminTransaksiListComponent = () => {
                             <div className='col-1 content-cell'>{transaction.id_transaksi}</div>
                             <div className='col-1 content-cell'>{transaction.id_pembeli}</div>
                             <div className='col-1 content-cell'>{transaction.id_penjual}</div>
-                            <div className='col-1 content-cell'>{transaction.waktu_pembelian}</div>
-                            <div className='col-1 content-cell'>{transaction.waktu_konfirmasi}</div>
-                            <div className='col-1 content-cell'>{transaction.status}</div>
-                            <div className='col-2 content-cell'>
-                                <div className='container-fluid'>
-                                    <div className='row'>
-                                        {transaction.detail_transaksi.map(detail => 
-                                            <div className='col-12 inner-cell'>
-                                                {detail.judul_buku}
-                                            </div>  
-                                        )}
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='col-1 content-cell'>
-                                <div className='container-fluid'>
-                                    <div className='row'>
-                                        {transaction.detail_transaksi.map(detail => 
-                                            <div className='col-12 inner-cell'>
-                                                {detail.jumlah_pembelian}
-                                            </div>  
-                                        )}
-                                    </div>
-                                </div>
-                            </div>
-                            <div className='col-1 content-cell right-most-cell'>
-                                <div className='container-fluid'>
-                                    <div className='row'>
-                                        {transaction.detail_transaksi.map(detail => 
-                                            <div className='col-12 inner-cell'>
-                                                Rp {detail.total_harga}
-                                            </div>  
-                                        )}
-                                    </div>
-                                </div>
+                            <div className='col-1 content-cell'>{transaction.waktu_pembelian === null ? <span>Dalam Keranjang</span> : <span>{transaction.waktu_pembelian}</span>}</div>
+                            <div className='col-1 content-cell'>{transaction.waktu_konfirmasi === null ? <span>Dalam Proses</span> : <span>{transaction.waktu_konfirmasi}</span>}</div>
+                            <div className='col-1 content-cell'>{transaction.status === null ? <span>Dalam Proses</span> : <span>{transaction.status}</span>}</div>
+                            <div className='col-4 content-cell right-most-cell'>
+                            <ul className='list-group list-group-flush'>
+                                {transaction.detail_transaksi.map(detail => 
+                                <li className='list-group-item detail-list'>{detail.judul_buku} ({detail.jumlah_pembelian} / Rp {detail.total_harga})</li>    
+                                )}
+                                </ul>
                             </div>
                             <div className='col-1'></div>
                         </React.Fragment>

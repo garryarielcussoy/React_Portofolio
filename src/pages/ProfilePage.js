@@ -6,9 +6,8 @@ import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
-import Header from '../components/Header'
+import HeaderAndNavigation from '../components/HeaderAndNavigation'
 import ProfileComponent from '../components/ProfileComponent'
-import NavigationTab from '../components/NavigationTab';
 import NotificationComponent from '../components/NotificationComponent'
 import UserBookListComponent from '../components/UserBookListComponent'
 import UserHistoryComponent from '../components/UserHistoryComponent'
@@ -17,8 +16,7 @@ import FooterComponent from '../components/FooterComponent';
 const ProfilePage = () => {
     return (
         <React.Fragment>
-            <Header />
-            <NavigationTab />
+            <HeaderAndNavigation />
             <ProfileComponent />
             <NotificationComponent />
             <UserBookListComponent />

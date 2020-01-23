@@ -71,7 +71,7 @@ class UserBookListComponent extends React.Component{
                                                         </div>
                                                     </div>
                                                     <button type='button' onClick={() => this.editBook(book.id_buku)} className='btn btn-primary edit-book-button'>Edit</button>
-                                                    <button type='button' onClick={() => this.deleteBook(book.id_buku)} className='btn btn-danger delete-book-button'>Hapus</button>
+                                                    <button type='button' onClick={() => this.deleteBook(book.id_buku)} className='btn btn-primary delete-book-button'>Hapus</button>
                                                 </div>    
                                                 )}
                                                 <div className='col-12 add-book-button-container'>

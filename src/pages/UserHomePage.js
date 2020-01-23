@@ -6,18 +6,17 @@ import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
-import Header from '../components/Header'
+import HeaderAndNavigation from '../components/HeaderAndNavigation'
 import Carousel from '../components/Carousel'
 import Footer from '../components/FooterComponent'
 import NavigationTab from '../components/NavigationTab'
 
 const UserHomePage = (props) => {
     // For user
-    if (this.props.isLogin === true){
+    if (props.isLogin === true){
         return (
             <React.Fragment>
-                <Header />
-                <NavigationTab />
+                <HeaderAndNavigation />
                 <Carousel />
                 <Footer />
             </React.Fragment>
@@ -26,7 +25,7 @@ const UserHomePage = (props) => {
     
     // For someone who has not logged in
     else {
-        this.props.history.push('/login')
+        props.history.push('/login')
         return <div></div>
     }
 }

@@ -12,12 +12,14 @@
 .not-found-title{
     font-weight: 700;
     margin-top: 150px;
-    margin-bottom: 50px;
+    margin-bottom: 30x;
     font-size: 2em;
+    color: #40514E;
 }
 
 .not-found-content{
     text-align: center;
+    margin-bottom: 40px;
 }
 
 .not-found-content img{
@@ -38,10 +40,25 @@
     width: 10%;
 }
 
+/* -------------------- Header and Navigation -------------------- */
+.header-and-navigation{
+    background-color: #11999E;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+}
+
+.header-and-navigation-logo-container{
+    text-align: center;
+}
+
+.header-and-navigation-logo{
+    height: 80px;
+    width: 80px;
+}
+
 /* -------------------- Header Section -------------------- */
 .header{
     text-align: center;
-    background-color: rgba(51, 240, 240, 1);
+    background-color: #11999E;
     padding: 5px 0px;
     position: fixed;
 }
@@ -54,7 +71,7 @@
 /* -------------------- Navigation Tab -------------------- */
 .navigation-menu{
     top: 70px;
-    background-color: rgba(51, 240, 240, 1);
+    background-color: #11999E;
 }
 
 .navigation-tabs{
@@ -62,18 +79,22 @@
 }
 
 .navigation-tab{
-    font-weight: 800;
-    background-color: rgba(51, 240, 240, 1);
-    border-top: darkblue 3px solid;
-    padding: 10px 15px;
+    font-weight: 900;
+    background-color: #11999E;
+    padding: 30px;
+}
+
+.cart-tab-container{
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .navigation-tab a{
-    color: black;
+    color: #E4F9F5;
 }
 
 .navigation-tab a:hover{
-    color: blue;
+    color: #30E3CA;
     text-decoration: none;
 }
 
@@ -203,84 +224,119 @@
 .login-container{
     margin-top: 150px;
     margin-bottom: 160px;
-    border-radius: 25px;
-    background-color: rgba(51, 240, 240, 1);
+    background-color: #11999E;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
 }
 
 .login-text, .register-text{
-    font-weight: 700;
+    font-weight: 900;
+    font-size: 1.3em;
     margin-top: 25px;
     margin-bottom: 25px;
+    color: #E4F9F5;
 }
 
 .link-to-register-container{
     margin-bottom: 20px;
     margin-top: 15px;
+    color: #E4F9F5;
+}
+
+.link-to-register-container a{
+    margin-bottom: 20px;
+    margin-top: 15px;
+    color: #30E3CA;
 }
 
 /* -------------------- Register -------------------- */
 .register-container{
     margin-top: 120px;
     margin-bottom: 50px;
-    border-radius: 25px;
-    background-color: rgba(51, 240, 240, 1);
+    border-radius: 20px;
+    background-color: #11999E;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
 }
 
 /* -------------------- Search and Filter Bar -------------------- */
 .search-filter-area{
-    background-color: rgba(51, 240, 240, 1);
+    background-color: #11999E;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
     margin-top: 117px;
     margin-left: -15px;
+    border-radius: 20px;
 }
 
 .cari-buku{
+    font-size: 1.3em;
     padding-top: 15px;
     padding-bottom: 15px;
-    font-weight: 700;
+    font-weight: 900;
+    color: #E4F9F5;
+
 }
 
 .search-button{
     margin-bottom: 15px;
+    background-color: #40514E;
+    border-radius: 5px;
+    font-weight: 900;
+    color: #E4F9F5;
+}
+
+.search-button:hover{
+    background-color: #30E3CA;
+}
+
+.search-button:visited{
+    background-color: #40514E;
 }
 
 .kategori{
     padding-top: 15px;
     padding-bottom: 15px;
-    font-weight: 700;
-    border-top: 1px solid black;
+    font-weight: 900;
+    color: #E4F9F5;
+    font-size: 1.3em;
+    border-top: 1px solid #40514E;
 }
 
 /* -------------------- Book List Page -------------------- */
 .book-information-container{
-    margin-top: 150px;
+    margin-top: 120px;
 }
 
 .daftar-buku-tersedia, .hasil-filter{
     margin-bottom: 15px;
     font-weight: 700;
+    color: #40514E;
 }
 
 .each-book-container{
-    border: 1px solid black;
+    border: 1px solid #40514E;
     padding: 5px;
     padding-bottom: 15px;
     height: 100%;
+    border-radius: 20px;
 }
 
 .each-book-tag-left{
     text-align: left;
+    color: #40514E;
 }
 
 .each-book-tag-center{
-    text-align: center;
+    color: #40514E;
+    padding-left: 10px;
 }
 
 .each-book-tag-right{
     text-align: left;
+    color: #40514E;
 }
 
 .each-book-container:hover{
-    box-shadow: 3px 3px 5px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
 }
 
 .each-book-image-container{
@@ -306,28 +362,31 @@
 
 .book-title{
     text-align: center !important;
-    font-weight: 700;
-    color: black !important;
+    font-weight: 900;
+    color: #40514E !important;
+    font-size: 1em;
 }
 
 .book-title:hover{
     cursor: pointer;
     text-align: center !important;
-    font-weight: 700;
-    color: black;
+    font-weight: 900;
+    color: #40514E;;
     text-decoration: none !important;
 }
 
 .each-book-container p{
-    font-size: 0.9em;
+    font-size: 1em;
     text-align: left;
     margin-bottom: 0;
+    color: #40514E;
 }
 
 .tidak-ketemu{
     font-weight: 700;
     font-size: 1.6em;
     text-align: center;
+    color: #40514E;
     margin-top: 170px;
 }
 
@@ -337,11 +396,14 @@
 
 /* -------------------- Book Detail Page -------------------- */
 .book-detail-container{
-    padding-top: 150px;
+    padding-top: 130px;
 }
 
 .left-part-container{
-    border: 1px solid black;
+    border: 1px solid #40514E;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    height: 340px;
+    border-radius: 20px;
 }
 
 .tag-container{
@@ -357,8 +419,12 @@
     border-radius: 50%;
 }
 
+.each-book-tag{
+    color: #40514E;
+    line-height: 1;
+}
+
 .username-fullname-hp-wrapper{
-    
     text-align: left;
     padding: 10px 5px 5px 5px;
 }
@@ -366,6 +432,7 @@
 .alamat-container{
     text-align: left;
     padding: 5px;
+    height: 195px;
 }
 
 .alamat-container p{
@@ -374,10 +441,13 @@
 
 .book-info-right{
     border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
 }
 
 .book-title-right p{
     font-weight: 700;
+    color: #40514E
 }
 
 .book-information-list{
@@ -385,8 +455,9 @@
 }
 
 .book-information-list p{
-    line-height: 0.5;
+    line-height: 1;
     text-align: left;
+    color: #40514E;
 }
 
 .deskripsi-container{
@@ -394,8 +465,11 @@
 }
 
 .deskripsi-container p{
-    border: 1px solid black;
+    border: 1px solid #40514E;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
     padding: 10px;
+    color: #40514E;
+    border-radius: 20px;
 }
 
 .foto-buku-wrapper{
@@ -427,21 +501,16 @@
 
 /* -------------------- Cart -------------------- */
 .cart-container{
-    margin-top: 150px;
+    margin-top: 130px;
     padding: 10px;
 }
 
 .each-cart-info-container{
-    border: 1px solid gray;
     margin-bottom: 40px;
     padding: 20px;
-}
-
-.each-cart-info-container:hover{
-    box-shadow: 3px 3px 5px 0px rgba(0,0,0,1);
-    border: 1px solid gray;
-    margin-bottom: 40px;
-    padding: 20px;
+    border: 1px solid #40514E;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    border-radius: 20px;
 }
 
 .cart-container img{
@@ -450,32 +519,56 @@
 
 .each-info-book-cart{
     text-align: left;
+    color: #40514E;
 }
 
 .look-detail-cart{
     margin-top: 25px;
     margin-left: 165px;
+    background-color: #40514E;
+    color: #E4F9F5;
+    border-radius: 5px;
+    font-weight: 900;
+}
+
+.look-detail-cart:hover{
+    margin-top: 25px;
+    margin-left: 165px;
+    background-color: #30E3CA;
+    color: #E4F9F5;
+    border-radius: 5px;
 }
 
 .order-now-button{
-    margin-top: 20px;    
+    margin-top: 20px;
+    background-color: #40514E;
+    color: #E4F9F5;
+    border-radius: 5px;
+    font-weight: 900;    
+}
+
+.order-now-button:hover{
+    margin-top: 20px;
+    background-color: #30E3CA;
+    color: #E4F9F5;
+    border-radius: 5px;    
 }
 
 .empty-cart{
-    padding-top: 150px;
+    padding-top: 130px;
     margin-bottom: 55px;
     font-weight: 700;
 }
 
 .empty-cart-logo-wrapper img{
     width: 100%;
-    margin-bottom: 150px;
+    margin-bottom: 170px;
 }
 
 /* -------------------- Profile -------------------- */
 /* ----- Profile ----- */
 .profile-biodata-container{
-    padding-top: 150px;
+    padding-top: 120px;
 }
 
 .profile-photo-wrapper{
@@ -493,20 +586,35 @@
 
 .username-text{
     text-align: center;
+    color: #40514E;
 }
 
 .profile-text{
     text-align: left;
+    color: #40514E;
 }
 
 .profile-title{
-    font-weight: 700;
+    font-weight: 900;
     margin: 10px 0;
+    color: #40514E;
 }
 
 .logout-button-container{
     margin-top: 10px;
     margin-bottom: 15px;
+}
+
+.logout-button{
+    background-color: #40514E;
+    color: #E4F9F5;
+    font-weight: 900;
+}
+
+.logout-button:hover{
+    background-color: #30E3CA;
+    color: #E4F9F5;
+    font-weight: 900;
 }
 
 .toggle-display{
@@ -518,61 +626,64 @@
 /* ----- Notification ----- */
 .notification-container{
     margin-top: 20px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid #40514E;
+    border-bottom: 1px solid #40514E;
 }
 
 .each-notification-list{
-    border: 1px solid black;
+    border: 1px solid #40514E;
+    margin-top: 15px;
     margin-bottom: 25px;
+    border-radius: 20px;
     padding: 20px;
-}
-
-.each-notification-list:hover{
-    border: 1px solid black;
-    margin-bottom: 25px;
-    padding: 20px;
-    box-shadow: 3px 3px 5px 0px rgba(0,0,0,1);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
 }
 
 .notification-text{
     text-align: left;
+    color: #40514E;
 }
 
 .transaction-section{
-    border-right: 1px solid black;
+    border-right: 1px solid #40514E;
 }
 
 .each-detail-container{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #40514E;
     margin-bottom: 15px;
 }
 
 .reject-order-button, .accept-order-button{
     margin: 20px;
+    color: #E4F9F5;
+    font-weight: 900;
+    background-color: #40514E;
+}
+
+.reject-order-button:hover, .accept-order-button:hover{
+    margin: 20px;
+    color: #E4F9F5;
+    font-weight: 900;
+    background-color: #30E3CA;
 }
 
 .notification-circle{
     height: 5px;
     width: 5px;
     border-radius: 50%;
-    background-color: red;
-    color: red;
+    background-color: #40514E;
+    color: #40514E;
     margin-right: 10px;
 }
 
 /* ----- Book List ----- */
 .each-book-container-profile{
-    border: 1px solid black;
+    border: 1px solid #40514E;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
     margin-bottom: 25px;
+    margin-top: 15px;
+    border-radius: 20px;
     padding: 20px;
-}
-
-.each-book-container-profile:hover{
-    border: 1px solid black;
-    margin-bottom: 25px;
-    padding: 20px;
-    box-shadow: 3px 3px 5px 0px rgba(0,0,0,1);
 }
 
 .each-book-photo-wrapper img{
@@ -581,11 +692,23 @@
 
 .book-list-text{
     text-align: left;
+    color: #40514E;
 }
 
-.edit-book-button, .delete-book-button{
+.edit-book-button, .delete-book-button, .add-book-button{
     margin-left: 20px;
     margin-right: 20px;
+    color: #E4F9F5;
+    background-color: #40514E;
+    font-weight: 900;
+}
+
+.edit-book-button:hover, .delete-book-button:hover, .add-book-button:hover{
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #E4F9F5;
+    background-color: #30E3CA;
+    font-weight: 900;
 }
 
 .add-book-button-container{
@@ -595,28 +718,25 @@
 
 /* ----- Shopping History ----- */
 .each-history-container{
-    border: 1px solid black;
+    border: 1px solid #40514E;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
+    border-radius: 20px;
     margin-bottom: 25px;
+    margin-top: 15px;
     padding: 20px;
-}
-
-.each-history-container:hover{
-    border: 1px solid black;
-    margin-bottom: 25px;
-    padding: 20px;
-    box-shadow: 3px 3px 5px 0px rgba(0,0,0,1);
 }
 
 .left-part-of-history{
-    border-right: 1px solid black;
+    border-right: 1px solid #40514E;
 }
 
 .history-list-text{
     text-align: left;
+    color: #40514E;
 }
 
 .each-right-part{
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #40514E;;
     padding: 10px;
 }
 
@@ -624,12 +744,14 @@
     font-weight: 700;
     font-size: 1.2em;
     margin-bottom: 15px;
+    color: #40514E;
 }
 
 /* -------------------- Footer -------------------- */
 .footer{
     margin-top: 30px;
-    background-color: aqua;
+    background-color: #11999E;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
 }
 
 .footer-logo{
@@ -637,84 +759,114 @@
 }
 
 .footer-logo-image{
-    width: 130px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
 }
 
 .copyright{
     text-align: center;
     padding-top: 20px;
     padding-bottom: 15px;
-    font-weight: 800;
+    font-weight: 900;
+    color: #E4F9F5;
 }
 
 .about-us-link{
     padding-top: 20px;
     padding-bottom: 15px;
-    font-weight: 700;
+    font-weight: 900;
     text-align: center;
 }
 
 .about-us-link a{
-    color: black;
+    color: #E4F9F5;
 }
 
 .about-us-link a:hover{
-    color: blue;
+    color: #30E3CA;
     text-decoration: none;
 }
 
 /* -------------------- Admin -------------------- */
+.admin-user-container, .admin-transaction-container{
+    margin-bottom: 50px;
+}
+
 .admin-title{
+    color: #40514E;
     text-align: center;
     font-weight: 700;
-    padding-top: 150px;
-    margin-bottom: 50px;
+    padding-top: 120px;
+    margin-bottom: 30px;
     font-size: 1.2em;
 }
 
 .header-cell{
     font-weight: 700;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
-    font-size: 0.8em;
+    border-top: 1px solid #40514E;
+    border-bottom: 1px solid #40514E;
+    border-left: 1px solid #40514E;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content-cell{
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
+    border-bottom: 1px solid #40514E;
+    border-left: 1px solid #40514E;
     text-align: center;
     overflow: auto;
-    font-size: 0.8em;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .delete-user-button{
-    margin-top: 15px;
+    background-color: #40514E;
+    color: #E4F9F5;
+    font-weight: 900;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.delete-user-button:hover{
+    background-color: #30E3CA;
+    color: #E4F9F5;
+    font-weight: 900;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .inner-cell{
-    border-bottom: 1px solid black;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 .right-most-cell{
-    border-right: 1px solid black;
+    border-right: 1px solid #40514E;
+}
+
+.detail-list{
+    background-color: #E4F9F5;
 }
 
 /* -------------------- About -------------------- */
 .about-us-title{
-    padding-top: 100px;
+    padding-top: 120px;
     margin-bottom: 20px;
-    font-weight: 700;
+    font-weight: 900;
     font-size: 1.2em;
+    color: #40514E;
 }
 
 .about-us-content{
-    border: 1px solid black;
+    border: 1px solid #40514E;
+    border-radius: 20px;
     padding: 20px;
     text-align: justify;
-    margin-bottom: 275px;
+    margin-bottom: 255px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
 }
 
 /* -------------------- HP Screen Size -------------------- */

@@ -9,11 +9,11 @@ import { actions, store } from "../store/store";
 const BookDetailComponent = (props) => {
     return (
         <React.Fragment>
-            <div className='container-fluid book-detail-container'>
+            <div className='container book-detail-container'>
                 <div className='row'>
                     
                     {/* ----- Showing seller information ----- */}
-                    <div className='col-md-6 col-sm-12'>
+                    <div className='col-md-5 col-sm-12'>
                         <div className='container-fluid'>
                             <div className='row left-part-container'>
                                 <div className='col-md-3 col-sm-12 profile-seller-container'>
@@ -21,26 +21,26 @@ const BookDetailComponent = (props) => {
                                         <img src={props.dataDetilPenjual.fotoProfil} />
                                     </div>
                                 </div>
-                                <div className='col-md-7 col-sm-12 username-fullname-hp-wrapper'>
+                                <div className='col-md-9 col-sm-12 username-fullname-hp-wrapper'>
                                     <div className='container-fluid'>
                                         <div className='row tag-container'>
                                             <div className='col-5 unstyled-col'><p className='each-book-tag'><b>Username</b></p></div>
                                             <div className='col-1 unstyled-col'><p className='each-book-tag'><b>:</b></p></div>
-                                            <div className='col-4 unstyled-col'><p className='each-book-tag'>{props.dataDetilPenjual.username}</p></div>
+                                            <div className='col-6 unstyled-col'><p className='each-book-tag'>{props.dataDetilPenjual.username}</p></div>
                                         </div>
                                     </div>
                                     <div className='container-fluid'>
                                         <div className='row tag-container'>
                                             <div className='col-5 unstyled-col'><p className='each-book-tag'><b>Nama Lengkap</b></p></div>
                                             <div className='col-1 unstyled-col'><p className='each-book-tag'><b>:</b></p></div>
-                                            <div className='col-4 unstyled-col'><p className='each-book-tag'>{props.dataDetilPenjual.namaLengkap}</p></div>
+                                            <div className='col-6 unstyled-col'><p className='each-book-tag'>{props.dataDetilPenjual.namaLengkap}</p></div>
                                         </div>
                                     </div>
                                     <div className='container-fluid'>
                                         <div className='row tag-container'>
                                             <div className='col-5 unstyled-col'><p className='each-book-tag'><b>Nomor HP</b></p></div>
                                             <div className='col-1 unstyled-col'><p className='each-book-tag'><b>:</b></p></div>
-                                            <div className='col-4 unstyled-col'><p className='each-book-tag'>{props.dataDetilPenjual.nomorHp}</p></div>
+                                            <div className='col-6 unstyled-col'><p className='each-book-tag'>{props.dataDetilPenjual.nomorHp}</p></div>
                                         </div>
                                     </div>
                                 </div>
@@ -52,7 +52,7 @@ const BookDetailComponent = (props) => {
                     </div>
 
                     {/* ----- Showing book informations ----- */}
-                    <div className='col-md-6 col-sm-12'>
+                    <div className='col-md-7 col-sm-12'>
                         <div className='container-fluid'>
                             <div className='row book-info-right'>
                                 <div className='col-12 book-title-right'>

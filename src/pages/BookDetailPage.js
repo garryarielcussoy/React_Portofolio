@@ -6,16 +6,14 @@ import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions, store } from "../store/store";
 
-import Header from '../components/Header'
+import HeaderAndNavigation from '../components/HeaderAndNavigation'
 import FooterComponent from '../components/FooterComponent'
-import NavigationTab from '../components/NavigationTab'
 import BookDetailComponent from '../components/BookDetailComponent'
 
 const BookDetailPage = () => {
     return (
         <React.Fragment>
-            <Header />
-            <NavigationTab />
+            <HeaderAndNavigation />
             <BookDetailComponent />
             <FooterComponent />
         </React.Fragment>

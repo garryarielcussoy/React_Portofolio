@@ -77,7 +77,7 @@ class CartPageComponent extends React.Component{
                                     </div>
                                 </div>
                                 <div className='col-12 order-button-container'>
-                                    <button type='button' onClick={() => this.sentOrder()} className='btn btn-primary order-now-button'>Pesan Sekarang</button>
+                                    <button style={{width: "200px"}} type='button' onClick={() => this.sentOrder()} className='btn btn-primary order-now-button'>Pesan Sekarang</button>
                                 </div>
                             </div>
                             <div className='col-md-2 col-sm-12'></div>
