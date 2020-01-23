@@ -23,11 +23,11 @@ class AddToCart extends React.Component{
                     <div className='col-md-4 col-sm-12'></div>
                     <div className='col-md-4 col-sm-12 plus-minus-container'>
                         <form onSubmit={(e) => this.props.handleSubmit(e)}>
-                        <button type='button' onClick={() => this.props.decreaseItem()} class="btn btn-primary search-button">-</button>
+                        <button type='button' onClick={() => this.props.decreaseItem()} class="btn btn-outline-secondary search-button">-</button>
                         <span className='placeholder-start'>{this.props.placeholderStart}</span>
-                        <button type="button" onClick={() => this.props.increaseItem()} class="btn btn-primary search-button">+</button>
+                        <button type="button" onClick={() => this.props.increaseItem()} class="btn btn-outline-secondary search-button">+</button>
                         <br />
-                        <button type="submit" onClick={() => this.handleAddToCart()} class="btn btn-primary search-button">Tambah Ke Keranjang</button>
+                        <button type="submit" onClick={() => this.handleAddToCart()} class="btn btn-outline-secondary search-button">Tambah Ke Keranjang</button>
                         </form>
                     </div>
                     <div className='col-md-4 col-sm-12'></div>

@@ -31,7 +31,7 @@ const SearchAndFilter = (props) => {
                         <div className="form-group">
                             <input onChange={e => props.handleChange(e)} type="text" class="form-control" name="nomorIsbn" id="nomorIsbn" aria-describedby="nomorIsbn" placeholder="Nomor ISBN" />
                         </div>
-                        <button type="submit" style={{width: "200px"}} className="btn btn-primary search-button" onClick={() => props.handleSearch()}>Cari</button>
+                        <button type="submit" style={{width: "200px"}} className="btn btn-outline-secondary search-button" onClick={() => props.handleSearch()}>Cari</button>
                     </form>
                     <h6 className='kategori'>Kategori</h6>
                     <form className='input-user-form' onSubmit={(e) => props.handleSubmit(e)}>
@@ -45,7 +45,7 @@ const SearchAndFilter = (props) => {
                                 <option>Sastra</option>
                             </select>
                         </div>
-                        <button type='submit' style={{width: "200px"}} className='btn btn-primary search-button' onClick={() => props.handleFilter()}>Cari</button>
+                        <button type='submit' style={{width: "200px"}} className='btn btn-outline-secondary search-button' onClick={() => props.handleFilter()}>Cari</button>
                     </form>
                 </div>
             </div>

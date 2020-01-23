@@ -70,12 +70,12 @@ class UserBookListComponent extends React.Component{
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <button type='button' onClick={() => this.editBook(book.id_buku)} className='btn btn-primary edit-book-button'>Edit</button>
-                                                    <button type='button' onClick={() => this.deleteBook(book.id_buku)} className='btn btn-primary delete-book-button'>Hapus</button>
+                                                    <button type='button' onClick={() => this.editBook(book.id_buku)} className='btn btn-outline-secondary edit-book-button'>Edit</button>
+                                                    <button type='button' onClick={() => this.deleteBook(book.id_buku)} className='btn btn-outline-secondary delete-book-button'>Hapus</button>
                                                 </div>    
                                                 )}
                                                 <div className='col-12 add-book-button-container'>
-                                                <Link to='/users/profile/tambah'><button type='button' className='btn btn-primary add-book-button'>Tambah Buku</button></Link>
+                                                <Link to='/users/profile/tambah'><button type='button' className='btn btn-outline-secondary add-book-button'>Tambah Buku</button></Link>
                                                 </div>
                                             </div>
                                         </div>:

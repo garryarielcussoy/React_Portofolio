@@ -62,7 +62,7 @@ class EditBookComponent extends React.Component{
                                     <textarea value={this.props.deskripsiBukuEdit} onChange={e => this.props.handleChange(e)} name="deskripsiBukuEdit" className='deskripsiBukuEdit' id="deskripsiBukuEdit" rows="3" cols="40"></textarea>
                                 </label>
                             </div>
-                            <button type="submit" class="btn btn-primary search-button" onClick={() => this.editBook()}>Edit Buku</button>
+                            <button type="submit" class="btn btn-outline-secondary search-button" onClick={() => this.editBook()}>Edit Buku</button>
                         </form>
                         </div>
                         <div className='col-md-4 col-sm-12'></div>

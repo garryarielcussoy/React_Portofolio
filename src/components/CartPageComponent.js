@@ -57,7 +57,7 @@ class CartPageComponent extends React.Component{
                                                         <p className='each-info-book-cart'><b>Jumlah Beli</b>: {cart.detail_transaksi.jumlah_pembelian}</p>
                                                         <p className='each-info-book-cart'><b>Harga Satuan</b>: Rp {cart.informasi_buku.harga_satuan}</p>
                                                         <p className='each-info-book-cart'><b>Harga Total</b>: Rp {cart.detail_transaksi.total_harga}</p>
-                                                        <button onClick={() => this.toBookDetail(cart.informasi_buku.id_buku)} type='button' className='btn btn-primary look-detail-cart'>Lihat Detail</button>
+                                                        <button onClick={() => this.toBookDetail(cart.informasi_buku.id_buku)} type='button' className='btn btn-outline-secondary look-detail-cart'>Lihat Detail</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -80,7 +80,7 @@ class CartPageComponent extends React.Component{
                                     </div>
                                 </div>
                                 <div className='col-12 order-button-container'>
-                                    <button style={{width: "200px"}} type='button' onClick={() => this.sentOrder()} className='btn btn-primary order-now-button'>Pesan Sekarang</button>
+                                    <button style={{width: "200px"}} type='button' onClick={() => this.sentOrder()} className='btn btn-outline-secondary order-now-button'>Pesan Sekarang</button>
                                 </div>
                             </div>
                             <div className='col-md-2 col-sm-12'></div>

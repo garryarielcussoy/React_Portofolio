@@ -48,7 +48,7 @@ class AdminUserListComponent extends React.Component{
                                 <div className='col-1 right-most-cell content-cell'>
                                     { user.status === "terhapus" ?
                                     <span>Terhapus</span>:
-                                    <button type='button' onClick={() => this.deleteUser(user.user_id)} className='delete-user-button btn-sm btn-primary'>Hapus</button>
+                                    <button type='button' onClick={() => this.deleteUser(user.user_id)} className='delete-user-button btn-sm btn-outline-secondary'>Hapus</button>
                                     }
                                 </div>
                                 <div className='col-1'></div>

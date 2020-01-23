@@ -1,10 +1,14 @@
 /* -------------------- Import Font -------------------- */
 @font-face {
     font-family: 'Roboto';
-    src: url(../fonts/Roboto-Light.ttf);
+    src: url(../fonts/Roboto-Regular.ttf);
 }
 
 /* -------------------- Global -------------------- */
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
 .unstyled-col{
     padding-left: 5px;
     padding-right: 5px;

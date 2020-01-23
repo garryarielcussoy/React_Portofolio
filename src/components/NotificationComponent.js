@@ -69,8 +69,8 @@ class NotificationComponent extends React.Component{
                                                             <p className='notification-text'><b>Jumlah Pembelian</b>: {notification.jumlah_pembelian}</p>
                                                             <p className='notification-text'><b>Total Harga</b>: Rp {notification.total_harga}</p>
                                                             <div className='accept-reject-container'>
-                                                                <button onClick={() => this.rejectOrder(notification.id_transaksi)} type='button' className='btn btn-primary reject-order-button'>Tolak</button>
-                                                                <button onClick={() => this.acceptOrder(notification.id_transaksi)} type='button' className='btn btn-primary accept-order-button'>Terima</button>
+                                                                <button onClick={() => this.rejectOrder(notification.id_transaksi)} type='button' className='btn btn-outline-secondary reject-order-button'>Tolak</button>
+                                                                <button onClick={() => this.acceptOrder(notification.id_transaksi)} type='button' className='btn btn-outline-secondary accept-order-button'>Terima</button>
                                                             </div>
                                                             </div>
                                                             <div className='col-md-6 col-sm-12'>

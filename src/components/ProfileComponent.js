@@ -40,7 +40,7 @@ class ProfileComponent extends React.Component{
                         <div className='col-md-2 col-sm-12'></div>
                         <div className='col-md-5 col-sm-12'></div>
                         <div className='col-md-2 col-sm-12 logout-button-container'>
-                        <button type='button' style={{width: "100px"}} onClick={() => this.handleLogout()} className='btn btn-primary logout-button'>Logout</button>
+                        <button type='button' style={{width: "100px"}} onClick={() => this.handleLogout()} className='btn btn-outline-secondary logout-button'>Logout</button>
                         </div>
                         <div className='col-md-5 col-sm-12'></div>
                         
