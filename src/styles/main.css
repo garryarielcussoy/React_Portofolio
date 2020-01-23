@@ -1,3 +1,9 @@
+/* -------------------- Import Font -------------------- */
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Light.ttf);
+}
+
 /* -------------------- Global -------------------- */
 .unstyled-col{
     padding-left: 5px;
