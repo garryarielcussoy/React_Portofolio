@@ -10,7 +10,12 @@ import HeaderAndNavigation from '../components/HeaderAndNavigation'
 import Footer from '../components/FooterComponent'
 import CartPageComponent from '../components/CartPageComponent';
 
-const CartPage = () => {
+const CartPage = (props) => {
+    // For user who got logged out
+    if (props.isLogin === false){
+        props.history.push('/login')
+    }
+    
     return (
         <React.Fragment>
             <HeaderAndNavigation />
@@ -20,4 +25,4 @@ const CartPage = () => {
     )
 }
 
-export default connect("", actions)(withRouter(CartPage));
+export default connect("isLogin", actions)(withRouter(CartPage));

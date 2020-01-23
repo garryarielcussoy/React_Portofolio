@@ -13,7 +13,12 @@ import UserBookListComponent from '../components/UserBookListComponent'
 import UserHistoryComponent from '../components/UserHistoryComponent'
 import FooterComponent from '../components/FooterComponent';
 
-const ProfilePage = () => {
+const ProfilePage = (props) => {
+    // For user who got logged out
+    if (props.isLogin === false){
+        props.history.push('/login')
+    }
+    
     return (
         <React.Fragment>
             <HeaderAndNavigation />
@@ -26,4 +31,4 @@ const ProfilePage = () => {
     )
 }
 
-export default connect("", actions)(withRouter(ProfilePage));
+export default connect("isLogin", actions)(withRouter(ProfilePage));

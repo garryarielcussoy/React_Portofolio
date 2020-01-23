@@ -12,6 +12,11 @@ import BookDetailComponent from '../components/BookDetailComponent'
 import AddToCart from '../components/AddToCart'
 
 const UserBookDetailPage = (props) => {
+    // For user who got logged out
+    if (props.isLogin === false){
+        props.history.push('/login')
+    }
+    
     return (
         <React.Fragment>
             <HeaderAndNavigation />
@@ -25,4 +30,4 @@ const UserBookDetailPage = (props) => {
     )
 }
 
-export default connect("canAdd", actions)(withRouter(UserBookDetailPage));
+export default connect("canAdd, isLogin", actions)(withRouter(UserBookDetailPage));

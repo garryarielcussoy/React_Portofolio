@@ -45,7 +45,7 @@ class UserHistoryComponent extends React.Component{
                                                         <p className='history-list-text'><b>Waktu Pembelian</b>: {history.waktu_pembelian}</p>
                                                         <p className='history-list-text'><b>Username Penjual</b>: {history.nama_penjual}</p>
                                                         <p className='history-list-text'><b>Jumlah Pembelian</b>: {history.waktu_pembelian}</p>
-                                                        <p className='history-list-text'><b>Total Harga</b>: {history.waktu_pembelian}</p>
+                                                        <p className='history-list-text'><b>Total Harga</b>: Rp {history.total_harga}</p>
                                                         </div>
                                                         <div className='col-md-6 col-sm-12 right-part-of-history'>
                                                             <div className='container-fluid'>
