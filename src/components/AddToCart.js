@@ -8,9 +8,11 @@ import { actions, store } from "../store/store";
 
 class AddToCart extends React.Component{
     // Handling function when user add a book to cart
-    handleAddToCart = () => {
-        this.props.addToCart()
-        this.props.history.push('/users/buku')
+    handleAddToCart = async () => {
+        await this.props.addToCart()
+        if (this.props.addToCartStatus === true){
+            this.props.history.push('/users/buku')
+        }
         this.props.showCart()
     }
     
@@ -35,4 +37,4 @@ class AddToCart extends React.Component{
     }
 }
 
-export default connect("placeholderStart", actions)(withRouter(AddToCart));
+export default connect("placeholderStart, addToCartStatus", actions)(withRouter(AddToCart));

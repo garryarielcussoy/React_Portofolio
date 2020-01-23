@@ -39,6 +39,7 @@ const inisialization = {
         deskripsiBuku: '',
         fotoBuku: ''
     },
+    addToCartStatus: false,
 
     // Register page
     emailRegister: '',
@@ -66,6 +67,7 @@ const inisialization = {
     usernamePenjualCart: '',
     alamatCart: '',
     nomorHpCart: '',
+    successSend: false,
 
     // ----- Profile page -----
     // Profile part
@@ -157,12 +159,28 @@ export const actions = store => (
 
     // Add books to active cart
     addToCart: async (state, event) => {
+        // Define the response message
+        const messageTypeOne = 'Sukses menambahkan buku ke keranjang'
+        const messageTypeTwo = 'Sukses menghapus buku dari keranjang'
+
         await axios({method: 'patch', url: localHost + "users/buku/" + state.dataDetilBuku.idBuku, headers: {"Authorization" : "Bearer " + state.tokenLogin}, data: {jumlah_pembelian: state.placeholderStart} })
             .then(response => {
                 store.setState({placeholderStart: 0})
-                Swal.fire(response.data.message, '', 'info')
+                
+                // Success case
+                if (response.data.message === messageTypeOne || response.data.message === messageTypeTwo)
+                {
+                    store.setState({addToCartStatus: true})
+                    Swal.fire(response.data.message, '', 'success')
+                }
+                // Fail case
+                else {
+                    store.setState({addToCartStatus: false})
+                    Swal.fire(response.data.message, '', 'warning')
+                }
             })
             .catch(response => {
+                store.setState({addToCartStatus: false})
                 Swal.fire(response.message, '', 'warning')
             })
     },
@@ -190,10 +208,19 @@ export const actions = store => (
         await axios({method: 'put', url: localHost + "users/keranjang", headers: {"Authorization" : "Bearer " + state.tokenLogin}})
             .then(response => {
                 store.setState({cartList: []})
-                alert(response.data.message)
+                if(response.data.message === 'Pesananmu sudah dikirim. Silahkan melakukan komunikasi dengan penjual. Terimakasih')
+                {
+                    store.setState({successSend: true})
+                    Swal.fire(response.data.message, '', 'success')
+                }
+                else{
+                    store.setState({successSend: false})
+                    Swal.fire(response.data.message, '', 'warning')
+                }
             })
             .catch(response => {
-                alert(response.data.message)
+                store.setState({successSend: false})
+                Swal.fire(response.data.message, '', 'warning')
             })
     },
 
@@ -201,7 +228,7 @@ export const actions = store => (
     acceptOrder: async (state, notificationId) => {
         await axios({method: 'post', url: localHost + "users/profile", headers: {"Authorization" : "Bearer " + state.tokenLogin}, data: {transaction_id: notificationId, status: 'terima'}})
             .then(response => {
-                alert("Sukses menerima pesanan!")
+                Swal.fire("Sukses menerima pesanan!", "", "success")
             })
             .catch(response => {
             })
@@ -211,7 +238,7 @@ export const actions = store => (
     rejectOrder: async (state, notificationId) => {
         await axios({method: 'post', url: localHost + "users/profile", headers: {"Authorization" : "Bearer " + state.tokenLogin}, data: {transaction_id: notificationId, status: 'tolak'}})
             .then(response => {
-                alert("Sukses menolak pesanan!")
+                Swal.fire("Sukses menolak pesanan!", "", "success")
             })
             .catch(response => {
             })
@@ -299,7 +326,7 @@ export const actions = store => (
     deleteUser: async (state, userId) => {
         await axios({method: 'delete', url: localHost + "admin/users", headers: {"Authorization" : "Bearer " + state.tokenLogin}, data: {user_id: userId}})
             .then(response => {
-                alert("Kamu telah menghapus user terkait")
+                Swal.fire("Kamu telah menghapus user terkait")
             })
             .catch(response => {
             })
@@ -326,19 +353,19 @@ export const actions = store => (
         await axios({method: 'post', url: localHost + "users/profile/tambah", headers: {"Authorization" : "Bearer " + state.tokenLogin}, data: data})
             .then(response => {
                 store.setState({successAddBook: true})
-                alert("Kamu sukses menambahkan buku")
+                Swal.fire("Kamu sukses menambahkan buku", "", "success")
             })
             .catch(response => {
                 store.setState({successAddBook: false})
                 
                 // Case when there is at least one field left empty
                 if(state.judulBukuAdd === '' || state.pengarangAdd === '' || state.penerbitAdd === '' || state.deskripsiBukuAdd === '' || state.categoryAdd === '' || state.stokAdd === '' || state.hargaSatuanAdd === ''){
-                    alert("Tidak boleh ada field yang dikosongkan (kecuali foto buku)")
+                    Swal.fire("Tidak boleh ada field yang dikosongkan (kecuali foto buku)", "", "warning")
                 }
 
                 // Case when the book has already added
                 else{
-                    alert("Buku yang kamu ingin tambahkan sudah ada di daftar buku yang kamu jual saat ini")
+                    Swal.fire("Buku yang kamu ingin tambahkan sudah ada di daftar buku yang kamu jual saat ini", "", "success")
                 }
             })
     },

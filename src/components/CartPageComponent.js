@@ -16,9 +16,12 @@ class CartPageComponent extends React.Component{
     }
 
     // Handling case when user click the sent order button
-    sentOrder = () => {
-        this.props.sentCart()
-        this.props.history.push("/users")
+    sentOrder = async () => {
+        await this.props.sentCart()
+        // When sending order is succesful
+        if (this.props.successSend === true){
+            this.props.history.push("/users")
+        }
     }
     
     render(){
@@ -108,4 +111,4 @@ class CartPageComponent extends React.Component{
         
 }
 
-export default connect("isLogin, cartList, totalHarga, jumlahPembelian, usernamePenjualCart, alamatCart, nomorHpCart", actions)(withRouter(CartPageComponent));
+export default connect("successSend, isLogin, cartList, totalHarga, jumlahPembelian, usernamePenjualCart, alamatCart, nomorHpCart", actions)(withRouter(CartPageComponent));
