@@ -36,10 +36,10 @@ class LoginComponent extends React.Component{
     render(){
         return (
             <React.Fragment>
-                <div className='container-fluid'>
+                <div className='container'>
                     <div className='row'>
-                        <div className='col-md-4 col-sm-12'></div>
-                        <div className='col-md-4 col-sm-12 login-container'>
+                        <div className='col-md-4 col-1'></div>
+                        <div className='col-md-4 col-10 login-container'>
                         
                         {/* ----- Login Part ----- */}
                         <h4 className='login-text'>LOGIN</h4>
@@ -59,7 +59,7 @@ class LoginComponent extends React.Component{
                             Daftar <a><Link to='/daftar'>disini</Link></a>
                         </div>
                         </div>
-                        <div className='col-md-4 col-sm-12'></div>
+                        <div className='col-md-4 col-1'></div>
                     </div>
                 </div>
             </React.Fragment>

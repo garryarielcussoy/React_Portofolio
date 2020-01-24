@@ -21,7 +21,7 @@ class AddBookComponent extends React.Component{
     render(){
         return (
             <React.Fragment>
-                <div className='container-fluid'>
+                <div className='container'>
                     <div className='row'>
                         <div className='col-md-4 col-sm-12'></div>
                         <div className='col-md-4 col-sm-12 register-container'>

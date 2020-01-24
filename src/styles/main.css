@@ -109,135 +109,25 @@
 }
 
 /* -------------------- Carousel -------------------- */
+.welcome-message{
+    padding-top: 120px;
+    color: #40514E;
+    font-weight: 900;
+    font-size: 2.2em;
+}
+
 .carousel-container{
-    padding-top: 130px;
-    padding-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 25px;
     width: 80%;
 }
 
 .carousel-content{
-    height: 400px;
+    height: 340px;
 }
 
-.advertisement-container{
-    margin-top: 200px;
-    border: 1px solid black;
-    padding: 50px;
-    margin-bottom: 50px;
-}
-
-.sambutan{
-    font-weight: 600;
-    text-align: center;
-}
-
-.flash{
-    font-size: 5.5em;
-    color: blue;
-    margin-right: 20px;
-    margin-left: 20px;
-}
-
-.W1{
-    animation: w1-pattern linear 5s infinite;
-}
-
-.eTwo{
-    animation: e2-pattern linear 5s infinite;
-}
-
-.L3{
-    animation: l3-pattern linear 5s infinite;
-}
-
-.C4{
-    animation: c4-pattern linear 5s infinite;
-}
-
-.O5{
-    animation: o5-pattern linear 5s infinite;
-}
-.M6{
-    animation: m6-pattern linear 5s infinite;
-}
-.eSeven{
-    animation: e7-pattern linear 5s infinite;
-}
-
-@keyframes w1-pattern{
-    0% {opacity: 0;}
-    1% {opacity: 1;}
-    9% {opacity: 1;}
-    10% {opacity: 0;}
-    75% {opacity: 0;}
-    80% {opacity: 1;}
-    100% {opacity: 0;}
-}
-
-@keyframes e2-pattern{
-    0% {opacity: 0;}
-    9% {opacity: 0;}
-    10% {opacity: 1;}
-    19% {opacity: 1;}
-    20% {opacity: 0}
-    75% {opacity: 0;}
-    80% {opacity: 1;}
-    100% {opacity: 0;}
-}
-
-@keyframes l3-pattern{
-    0% {opacity: 0;}
-    19% {opacity: 0;}
-    20% {opacity: 1;}
-    29% {opacity: 1;}
-    30% {opacity: 0}
-    75% {opacity: 0;}
-    80% {opacity: 1;}
-    100% {opacity: 0;}
-}
-
-@keyframes c4-pattern{
-    0% {opacity: 0;}
-    29% {opacity: 0;}
-    30% {opacity: 1;}
-    39% {opacity: 1;}
-    40% {opacity: 0}
-    75% {opacity: 0;}
-    80% {opacity: 1;}
-    100% {opacity: 0;}
-}
-
-@keyframes o5-pattern{
-    0% {opacity: 0;}
-    39% {opacity: 0;}
-    40% {opacity: 1;}
-    49% {opacity: 1;}
-    50% {opacity: 0}
-    75% {opacity: 0;}
-    80% {opacity: 1;}
-    100% {opacity: 0;}
-}
-
-@keyframes m6-pattern{
-    0% {opacity: 0;}
-    49% {opacity: 0;}
-    50% {opacity: 1;}
-    59% {opacity: 1;}
-    60% {opacity: 0}
-    75% {opacity: 0;}
-    80% {opacity: 1;}
-    100% {opacity: 0;}
-}
-
-@keyframes e7-pattern{
-    0% {opacity: 0;}
-    59% {opacity: 0;}
-    60% {opacity: 1;}
-    69% {opacity: 1;}
-    70% {opacity: 0}
-    75% {opacity: 0;}
-    80% {opacity: 1;}
-    100% {opacity: 0;}
+.carousel-content-container{
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,1);
 }
 
 /* -------------------- Login -------------------- */
@@ -892,32 +782,27 @@
 /* -------------------- HP Screen Size -------------------- */
 @media(max-width:767px){
     /* ----- Home Page ----- */
-    .advertisement-container{
-        margin-top: 200px;
-        border: 1px solid black;
-        padding: 50px;
-        margin-bottom: 150px;
-    }
-    
-    .flash{
-        font-size: 2em;
-        color: blue;
-        margin-left: 0px;
-        margin-right: 0px;
+    .welcome-message{
+        font-size: 1.5em;
+        margin-top: 80px;
     }
 
-    .W1, .eTwo, .L3, .C4, .O5, .M6, .eSeven{
-        animation: none;
+    .carousel-container{
+        width: 90%;
+    }
+
+    .carousel-content-container{
+        height: 80px;
     }
 
     /* ----- Book List Page ----- */
-    .book-information-container{
-        margin-top: 50px;
-    }
-    
     .search-filter-area{
-        margin-top: 130px;
+        margin-top: 200px;
         margin-left: 0px;
+    }
+
+    .book-information-container{
+        margin-top: 30px;
     }
 
     .alamat-container{
@@ -925,20 +810,38 @@
     }
 
     .tidak-ketemu{
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .empty-shelf-wrapper img{
         margin-top: 30px;
-        width: 350px;
+        width: 300px;
     }
 
     /* ----- Cart Page ----- */
+    .cart-container{
+        margin-top: 200px;
+    }
+    
     .look-detail-cart{
         margin-left: 0px;
     }
 
+    .empty-cart{
+        margin-top: 80px;
+        font-size: 1.5em;
+        margin-bottom: 30px;
+    }
+
+    .empty-cart-logo-wrapper img{
+        width: 200px;
+    }
+
     /* ----- Profile ----- */
+    .profile-biodata-container{
+        margin-top: 50px;
+    }
+    
     .profile-photo-wrapper{
         text-align: left;
     }

@@ -10,9 +10,9 @@ const FooterComponent = () => {
     return (
         <div className='container-fluid footer'>
             <div className='row footer'>
-                <div className='copyright col-md-2 col-sm-6'>&copy; Copyright 2020</div>
-                <div className='col-md-8 col-sm-12'></div>
-                <div className='about-us-link col-md-2 col-sm-6'><Link to='/about'>About Us</Link></div>
+                <div className='copyright col-md-2 col-6'>&copy; Copyright 2020</div>
+                <div className='col-md-8 col-2'></div>
+                <div className='about-us-link col-md-2 col-4'><Link to='/about'>About Us</Link></div>
             </div>
         </div>
     )

@@ -25,8 +25,8 @@ const HeaderAndNavigation = (props) => {
                 {/* ----- Home ----- */}
                 <div className='col-md-1 col-3 navigation-tab'>
                     {props.isLogin === false ?
-                    <Link to='/'><a className='home-tab'>Beranda</a></Link>:
-                    <Link to='/users'><a className='home-tab'>Beranda</a></Link>
+                    <Link to='/'><a className='home-tab'>Home</a></Link>:
+                    <Link to='/users'><a className='home-tab'>Home</a></Link>
                     }
                 </div>
 

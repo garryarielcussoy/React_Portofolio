@@ -12,22 +12,17 @@ import secondPoster from "../img/secondPoster.jpg"
 const Carousel = () => {
     return (
         <React.Fragment>
+            <h1 className='welcome-message'>Selamat datang di SerbaBuku</h1>
             <div className="container carousel-container">
-                <div id="myCarousel" className="carousel slide" data-ride="carousel">
-                    {/* -- Indicators -- */}
-                    <ol className="carousel-indicators">
-                        <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
-                        <li data-target="#myCarousel" data-slide-to="1"></li>
-                    </ol>
-
+                <div id="myCarousel" className="carousel slide carousel-content-container" data-ride="carousel">
                     {/* -- Wrapper for slides -- */}
                     <div className="carousel-inner">
                         <div className="item active carousel-content">
-                            <img src={firstPoster} alt="Los Angeles" style={{width: "100%"}} />
+                            <img src={firstPoster} alt="First Poster" style={{width: "100%"}} />
                         </div>
 
                         <div className="item carousel-content">
-                            <img src={secondPoster} alt="Chicago" style={{height: "100%"}} />
+                            <img src={secondPoster} alt="Second Poster" style={{width: "100%"}} />
                         </div>
                     </div>
 
