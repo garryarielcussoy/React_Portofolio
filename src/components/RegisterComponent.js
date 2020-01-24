@@ -4,7 +4,7 @@ import '../styles/main.css'
 
 import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
-import { actions, store } from "../store/store";
+import { actions } from "../store/store";
 
 class RegisterComponent extends React.Component{
     // Handling register session

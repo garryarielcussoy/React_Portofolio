@@ -4,7 +4,7 @@ import '../styles/main.css'
 
 import { withRouter, Link } from "react-router-dom";
 import { connect } from "unistore/react";
-import { actions, store } from "../store/store";
+import { actions } from "../store/store";
 
 class LoginComponent extends React.Component{
     // Login session for admin

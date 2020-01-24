@@ -4,7 +4,7 @@ import '../styles/main.css'
 
 import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
-import { actions, store } from "../store/store";
+import { actions } from "../store/store";
 
 import emptyCartLogo from '../img/emptyCart.png'
 
@@ -44,7 +44,7 @@ class CartPageComponent extends React.Component{
                                                 <div className='container-fluid'>
                                                     <div className='row'>
                                                         <div className='col-md-2 cart-book-image-wrapper col-sm-12'>
-                                                            <img src={cart.informasi_buku.foto_buku} />
+                                                            <img alt="" src={cart.informasi_buku.foto_buku} />
                                                         </div>
                                                         <div className='col-md-5 col-sm-12 cart-info-container'>
                                                         <p className='each-info-book-cart'><b>Judul Buku</b>: {cart.informasi_buku.judul_buku}</p>
@@ -99,7 +99,7 @@ class CartPageComponent extends React.Component{
                         <div className='row'>
                             <div className='col-md-5 col-sm-12'></div>
                             <div className='col-md-2 col-sm-12 empty-cart-logo-wrapper'>
-                                <img src={emptyCartLogo} />
+                                <img src={emptyCartLogo} alt=""/>
                             </div>
                             <div className='col-md-5 col-sm-12'></div>
                         </div>

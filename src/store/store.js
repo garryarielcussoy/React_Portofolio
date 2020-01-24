@@ -1,8 +1,6 @@
 import createStore from 'unistore'
 import axios from 'axios'
 import Swal from 'sweetalert2'
-import { stat } from 'fs';
-import { func } from 'prop-types';
 
 const inisialization = {
     // Search and filter

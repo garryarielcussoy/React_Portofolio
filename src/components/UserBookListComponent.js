@@ -53,7 +53,7 @@ class UserBookListComponent extends React.Component{
                                                     <div className='container-fluid'>
                                                         <div className='row'>
                                                             <div className='col-md-2 col-sm12 each-book-photo-wrapper'>
-                                                                <img src={book.foto_buku} />
+                                                                <img alt="" src={book.foto_buku} />
                                                             </div>
                                                             <div className='col-md-5 col-sm-12'>
                                                             <p className='book-list-text'><b>Judul Buku</b>: {book.judul_buku}</p>

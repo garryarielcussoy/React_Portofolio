@@ -4,7 +4,7 @@ import '../styles/main.css'
 
 import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
-import { actions, store } from "../store/store";
+import { actions } from "../store/store";
 
 class ProfileComponent extends React.Component{
     // Logout session
@@ -24,7 +24,7 @@ class ProfileComponent extends React.Component{
                         {/* ----- Profile Photo ----- */}
                         <div className='col-md-3 col-sm-12 profile-photo-username'>
                             <div className='profile-photo-wrapper'>
-                                <img src={this.props.profileUserData.fotoProfil} />
+                                <img alt="" src={this.props.profileUserData.fotoProfil} />
                                 <p className='username-text'><b>{this.props.profileUserData.username}</b></p>
                             </div>
                         </div>

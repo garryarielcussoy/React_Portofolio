@@ -4,7 +4,7 @@ import '../styles/main.css'
 
 import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
-import { actions, store } from "../store/store";
+import { actions } from "../store/store";
 
 const BookDetailComponent = (props) => {
     return (
@@ -18,7 +18,7 @@ const BookDetailComponent = (props) => {
                             <div className='row left-part-container'>
                                 <div className='col-md-3 col-sm-12 profile-seller-container'>
                                     <div className='profile-seller-wrapper'>
-                                        <img src={props.dataDetilPenjual.fotoProfil} />
+                                        <img alt="" src={props.dataDetilPenjual.fotoProfil} />
                                     </div>
                                 </div>
                                 <div className='col-md-9 col-sm-12 username-fullname-hp-wrapper'>
@@ -59,7 +59,7 @@ const BookDetailComponent = (props) => {
                                 <p>{props.dataDetilBuku.judulBuku}</p>
                                 </div>
                                 <div className='col-md-4 col-sm-12 foto-buku-wrapper'>
-                                    <img src={props.dataDetilBuku.fotoBuku} />
+                                    <img src={props.dataDetilBuku.fotoBuku} alt="" />
                                 </div>
                                 <div className='col-md-8 col-sm-12 book-information-list'>
                                     <div className='container-fluid'>

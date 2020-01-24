@@ -4,12 +4,11 @@ import '../styles/main.css'
 
 import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
-import { actions, store } from "../store/store";
+import { actions } from "../store/store";
 
 import HeaderAndNavigation from '../components/HeaderAndNavigation'
 import Carousel from '../components/Carousel'
 import Footer from '../components/FooterComponent'
-import NavigationTab from '../components/NavigationTab'
 
 const UserHomePage = (props) => {
     // For user

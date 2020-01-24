@@ -47,7 +47,7 @@ class BookListPageComponent extends React.Component{
             return (
                 <div className="loading">
                     <p>Memuat...</p>
-                    <img src={loadingGif}/>
+                    <img src={loadingGif} alt=""/>
                 </div>
             )
         }
@@ -61,7 +61,7 @@ class BookListPageComponent extends React.Component{
                             Maaf, buku yang kamu cari tidak ditemukan
                         </div>
                         <div className='col-12 empty-shelf-wrapper'>
-                            <img src={emptyShelf} />
+                            <img src={emptyShelf} alt=""/>
                         </div>
                     </div>
                 </div>
@@ -94,7 +94,7 @@ class BookListPageComponent extends React.Component{
                                         <a onClick={() => this.toBookDetail(buku.id_buku)} className='book-title'>{buku.judul_buku}</a>
                                         <div className='image-container-wrapper text-center'>    
                                             <div className='each-book-image-container text-center'>
-                                                <img src={buku.foto_buku} />
+                                                <img src={buku.foto_buku} alt="" />
                                             </div>
                                         </div>
                                         <div className='container-fluid'>

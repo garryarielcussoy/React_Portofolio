@@ -4,7 +4,7 @@ import '../styles/main.css'
 
 import { withRouter, Link } from "react-router-dom";
 import { connect } from "unistore/react";
-import { actions, store } from "../store/store";
+import { actions } from "../store/store";
 
 const NavigationTab = (props) => {
     return (
@@ -18,30 +18,30 @@ const NavigationTab = (props) => {
                                 {/* ----- Home ----- */}
                                 <div className='col-3 navigation-tab'>
                                     {props.isLogin === false ?
-                                    <Link to='/'><a className='home-tab'>Home</a></Link>:
-                                    <Link to='/users'><a className='home-tab'>Home</a></Link>
+                                    <Link to='/'>Home</Link>:
+                                    <Link to='/users'>Home</Link>
                                     }
                                 </div>
 
                                 {/* ----- Book List ----- */}
                                 <div className='col-3 navigation-tab'>
                                     {props.isLogin === false ?
-                                    <Link to='/public/buku'><a onClick={() => props.resetSearch()} className='book-list-tab'>Buku</a></Link>:
-                                    <Link to='/users/buku'><a onClick={() => props.resetSearch()} className='book-list-tab'>Buku</a></Link>
+                                    <Link to='/public/buku'><a href="#" onClick={() => props.resetSearch()} className='book-list-tab'>Buku</a></Link>:
+                                    <Link to='/users/buku'><a href="#" onClick={() => props.resetSearch()} className='book-list-tab'>Buku</a></Link>
                                     }
                                 </div>
 
                                 {/* ----- Cart ----- */}
                                 <div className='col-3 navigation-tab'>
                                     {props.isLogin === false ?
-                                    <Link to='/login'><a className='cart-tab'>Keranjang</a></Link>:
-                                    <Link to='/users/keranjang'><a onClick={() => props.showCart()} className='cart-tab'>Keranjang</a></Link>
+                                    <Link to='/login'><a href="#" className='cart-tab'>Keranjang</a></Link>:
+                                    <Link to='/users/keranjang'><a href="#" onClick={() => props.showCart()} className='cart-tab'>Keranjang</a></Link>
                                     }
                                 </div>
 
                                 {/* ----- Profile / Login ----- */}
                                 <div className='col-3 navigation-tab'>
-                                    <a onClick={() => props.showProfile()} className='profile-tab'>
+                                    <a href="#" onClick={() => props.showProfile()} className='profile-tab'>
                                     {props.isLogin === false ? 
                                     <Link to='/login'>Login</Link> :
                                     <Link to='/users/profile'>Profile</Link>
