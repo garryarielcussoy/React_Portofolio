@@ -24,9 +24,9 @@ script:
 #- cp travis.env .env
 #- cat .env
 ###- mkdir logs
-- npm run build
+- sudo npm run build
 # - npm run test
-after_success:
+# after_success:
 # - npm run coverage
 
 deploy:
