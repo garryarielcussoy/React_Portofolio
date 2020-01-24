@@ -6,31 +6,29 @@ import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions } from "../store/store";
 
+import background1 from "../img/Background1.jpg"
+import background2 from "../img/Background2.jpg"
+
 const Carousel = () => {
     return (
         <React.Fragment>
             <div className="container">
                 <h2>Carousel Example</h2>  
-                <div id="myCarousel" className="carousel slide" data-ride="carousel">
+                <div id="myCarousel" className="carousel slide carousel-container" data-ride="carousel">
                     {/* <!-- Indicators --> */}
                     <ol className="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
                     <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
                     </ol>
 
                     {/* <!-- Wrapper for slides --> */}
                     <div className="carousel-inner">
                     <div className="item active">
-                        <img src="../img/Background2.jpg" alt="Los Angeles" style={{width: "100%"}} />
+                        <img src={background2} alt="Los Angeles" style={{width: "100%"}} />
                     </div>
 
                     <div className="item">
-                        <img src="../img/Background1.jpg" alt="Chicago" style={{width: "100%"}} />
-                    </div>
-                    
-                    <div className="item">
-                        <img src="../img/Background2.jpg" alt="New york" style={{width: "100%"}} />
+                        <img src={background1} alt="Chicago" style={{width: "100%"}} />
                     </div>
                     </div>
 
