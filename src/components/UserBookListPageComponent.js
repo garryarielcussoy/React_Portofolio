@@ -142,7 +142,7 @@ class UserBookListPageComponent extends React.Component{
                                             <div className='row'>
                                                 <div className='unstyled-col col-3'><p className='each-book-tag-left'><b>Harga</b></p></div>
                                                 <div className='unstyled-col-center col-1'><p className='each-book-tag'><b>:</b></p></div>
-                                                <div className='unstyled-col col-7'><p className='each-book-tag-right'>{buku.harga_satuan}</p></div>
+                                                <div className='unstyled-col col-7'><p className='each-book-tag-right'>Rp {buku.harga_satuan}</p></div>
                                             </div>
                                         </div>
                                         <div className='container-fluid'>

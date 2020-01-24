@@ -6,11 +6,13 @@ import { withRouter } from "react-router-dom";
 import { connect } from "unistore/react";
 import { actions } from "../store/store";
 
+import Swal from 'sweetalert2'
+
 class ProfileComponent extends React.Component{
     // Logout session
     handleLogout = async () => {
         await this.props.handleLogout()
-        alert("Sukses Logout")
+        Swal.fire("Sukses Logout", "", "success")
         this.props.history.push('/')
     }
     

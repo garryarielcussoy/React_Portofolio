@@ -110,7 +110,13 @@
 
 /* -------------------- Carousel -------------------- */
 .carousel-container{
-    margin-top: 110px;
+    padding-top: 130px;
+    padding-bottom: 20px;
+    width: 80%;
+}
+
+.carousel-content{
+    height: 400px;
 }
 
 .advertisement-container{
