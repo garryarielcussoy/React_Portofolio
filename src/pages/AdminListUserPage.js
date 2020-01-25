@@ -7,7 +7,7 @@ import { connect } from "unistore/react";
 import { actions } from "../store/store";
 
 import Header from '../components/Header'
-import Footer from '../components/FooterComponent'
+import SimpleFooter from '../components/SimpleFooter'
 import NavigationTabAdmin from '../components/NavigationTabAdmin'
 import AdminUserListComponent from '../components/AdminUserListComponent';
 
@@ -17,7 +17,7 @@ const AdminListUserPage = () => {
             <Header />
             <NavigationTabAdmin />
             <AdminUserListComponent />
-            <Footer />
+            <SimpleFooter />
         </React.Fragment>
     )
 }

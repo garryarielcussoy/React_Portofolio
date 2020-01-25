@@ -20,8 +20,8 @@ class AdminUserListComponent extends React.Component{
         return (
             <React.Fragment>
                 <h4 className='admin-title'>USER LIST</h4>
-                <div className='container-fluid'>
-                    <div className='row admin-user-container'>
+                <div className='container-fluid admin-user-container'>
+                    <div className='row'>
                         
                         {/* ----- Table Header ----- */}
                         <div className='col-1'></div>

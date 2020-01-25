@@ -13,8 +13,8 @@ const AdminTransaksiListComponent = () => {
     return (
         <React.Fragment>
             <h4 className='admin-title'>TRANSACTIONS LIST</h4>
-            <div className='container-fluid'>
-                <div className='row admin-transaction-container'>
+            <div className='container-fluid admin-transaction-container'>
+                <div className='row'>
 
                     {/* ----- Table Header ----- */}
                     <div className='col-1'></div>

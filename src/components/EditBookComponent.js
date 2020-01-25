@@ -22,8 +22,8 @@ class EditBookComponent extends React.Component{
             <React.Fragment>
                 <div className='container'>
                     <div className='row'>
-                        <div className='col-md-4 col-sm-12'></div>
-                        <div className='col-md-4 col-sm-12 register-container'>
+                        <div className='col-md-4 col-1'></div>
+                        <div className='col-md-4 col-10 register-container'>
                         <h4 className='register-text'>EDIT BUKU</h4>
                         <form onSubmit={(e) => this.props.handleSubmit(e)}>
                             <div className="form-group">
@@ -65,7 +65,7 @@ class EditBookComponent extends React.Component{
                             <button type="submit" class="btn btn-outline-secondary search-button" onClick={() => this.editBook()}>Edit Buku</button>
                         </form>
                         </div>
-                        <div className='col-md-4 col-sm-12'></div>
+                        <div className='col-md-4 col-1'></div>
                     </div>
                 </div>
             </React.Fragment>

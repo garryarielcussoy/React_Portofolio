@@ -700,6 +700,7 @@
 /* -------------------- Admin -------------------- */
 .admin-user-container, .admin-transaction-container{
     margin-bottom: 50px;
+    min-height: 355px;
 }
 
 .admin-title{
