@@ -790,6 +790,7 @@
 
     .carousel-container{
         width: 90%;
+        min-height: 270px;
     }
 
     .carousel-content-container{
@@ -817,6 +818,16 @@
     .empty-shelf-wrapper img{
         margin-top: 30px;
         width: 300px;
+    }
+
+    /* ----- Book Detail ----- */
+    .left-part-container{
+        margin-top: 70px;
+        margin-bottom: 30px;
+    }
+
+    .profile-seller-wrapper{
+        max-width: 25%;
     }
 
     /* ----- Cart Page ----- */

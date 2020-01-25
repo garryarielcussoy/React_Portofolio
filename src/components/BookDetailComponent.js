@@ -16,12 +16,12 @@ const BookDetailComponent = (props) => {
                     <div className='col-md-5 col-sm-12'>
                         <div className='container-fluid'>
                             <div className='row left-part-container'>
-                                <div className='col-md-3 col-sm-12 profile-seller-container'>
+                                <div className='col-md-3 col-12 profile-seller-container'>
                                     <div className='profile-seller-wrapper'>
                                         <img alt="" src={props.dataDetilPenjual.fotoProfil} />
                                     </div>
                                 </div>
-                                <div className='col-md-9 col-sm-12 username-fullname-hp-wrapper'>
+                                <div className='col-md-9 col-12 username-fullname-hp-wrapper'>
                                     <div className='container-fluid'>
                                         <div className='row tag-container'>
                                             <div className='col-5 unstyled-col'><p className='each-book-tag'><b>Username</b></p></div>
